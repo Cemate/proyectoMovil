@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PrincipalComponent implements OnInit {
   formatos: Formato[];
+  buscar: string;
 
   constructor(private _formato: FormatoService,
               private router: Router) {
@@ -20,7 +21,7 @@ export class PrincipalComponent implements OnInit {
   }
 
   escogerFormato(id: number) {
-    this.router.navigate( ['/formato', id] );
+    this.router.navigate( ['/home/formato', id] );
   }
 
 }

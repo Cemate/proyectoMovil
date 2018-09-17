@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app.routing';
 import { SidebarComponent } from './pages/shared/sidebar/sidebar.component';
 import { NavegacionComponent } from './pages/shared/navegacion/navegacion.component';
 import { FormatoComponent } from './pages/formato/formato.component';
+import { BuscadorInzquierdoComponent } from './pages/shared/buscador-inzquierdo/buscador-inzquierdo.component';
+import { DatosFormatoComponent } from './pages/formato/datos-formato/datos-formato.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FormatoComponent } from './pages/formato/formato.component';
     SidebarComponent,
     NavegacionComponent,
     FormatoComponent,
+    BuscadorInzquierdoComponent,
+    DatosFormatoComponent,
   ],
   imports: [
     BrowserModule,

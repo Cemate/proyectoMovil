@@ -9,33 +9,18 @@ export class FormatoService {
   private formatos: Formato[] = [
     {
       id: 1,
-      nombre: 'Constancia de origen y vecindad',
-      imagen: 'formato1'
+      nombre: 'C. de Origen y vecidad',
+      imagen: 'origen-vecindad'
     },
     {
       id: 2,
-      nombre: 'Constancia de origen y vecindad',
-      imagen: 'formato4'
+      nombre: 'C. de Liberación de servicio',
+      imagen: 'liberacion'
     },
     {
       id: 3,
-      nombre: 'Constancia de origen y vecindad',
-      imagen: 'formato2'
-    },
-    {
-      id: 4,
-      nombre: 'Constancia de origen y vecindad',
-      imagen: 'formato3'
-    },
-    {
-      id: 5,
-      nombre: 'Constancia de origen y vecindad',
-      imagen: 'formato4'
-    },
-    {
-      id: 6,
-      nombre: 'Constancia de origen y vecindad',
-      imagen: 'formato1'
+      nombre: 'C. de nombramiento',
+      imagen: 'nombramiento'
     }
   ];
 
