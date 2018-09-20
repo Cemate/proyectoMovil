@@ -1,6 +1,6 @@
+import { FormatoService } from './../../../services/formato.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FormatoService } from './../../services/formato.service';
 
 @Component({
   selector: 'app-formato',

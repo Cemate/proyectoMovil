@@ -1,0 +1,113 @@
+<div class="search-area well well-sm oculto-impresion">
+  <div class="search-filter-header bg-primary">
+    <h5 class="smaller no-margin-bottom">
+      <i class="ace-icon fa fa-sliders light-green bigger-130"></i>&nbsp; Datos del formato
+    </h5>
+  </div>
+
+  <div class="space-10"></div>
+  <div>
+  <form>
+      <div class="form-group">
+          <label for="nombre"> Nombre </label>
+
+          <div>
+            <input autofocus 
+                    type="text" 
+                    id="nombre" 
+                    placeholder="Nombre completo" 
+                    class="col-xs-10 col-sm-12" />
+          </div>
+      </div>
+      <div class="form-group" style="margin-top: 6px;">
+          <label class="">Sexo</label>
+
+          <div class="radio" style="margin-top: -3px">
+            <label>
+              <input name="sexo" type="radio" class="ace" checked="checked" />
+              <span class="lbl">Hombre</span>
+            </label>
+            <label>
+              <input name="sexo" type="radio" class="ace" />
+              <span class="lbl">Mujer</span>
+            </label>
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="localidad"> Localidad </label>
+          <div>
+            <input autofocus 
+                    type="text" 
+                    id="localidad" 
+                    placeholder="Localidad" 
+                    class="col-xs-10 col-sm-12" />
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="periodo" class=" sepElemForm">Periodo</label>
+        <div>
+            <input type="text" id="periodo" 
+            placeholder="Periodo" 
+            class="col-xs-10 col-sm-12" 
+            value="periodo 2018"/>
+        </div>
+      </div>
+      <!-- Nombrado -->
+      <div class="form-group">
+        <label for="nombrado" class=" sepElemForm"> Nombrado </label>
+          <div>
+            <input autofocus 
+                    type="text" 
+                    id="nombrado" 
+                    placeholder="Nombrado" 
+                    class="col-xs-10 col-sm-12" />
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="fecha"  class="sepElemForm">Fecha de expedición</label>
+        <div class="row">
+            <div class="col-sm-2"><input type="text" name="dia" id="dia" minlength="1" maxlength="31" size="2" ></div>
+            <div class="col-sm-6">
+              <select name="mes" id="mes">
+                <option value="ENERO">ENERO</option>
+                <option value="FEBRERO">FEBRERO</option>
+                <option value="MARZO">MARZO</option>
+                <option value="ABRIL">ABRIL</option>
+                <option value="MAYO">MAYO</option>
+                <option value="JUNIO">JUNIO</option>
+                <option value="JULIO">JULIO</option>
+                <option value="AGOSTO">AGOSTO</option>
+                <option value="SEPTIEMBRE" selected="selected">SEPTIEMBRE</option>
+                <option value="OCTUBRE">OCTUBRE</option>
+                <option value="NOVIEMBRE">NOVIEMBRE</option>
+                <option value="DICIEMBRE">DICIEMBRE</option>
+              </select>
+            </div>
+            <div class="col-sm-4"><input type="text" name="anio" id="anio" minlength="2018" maxlength="2019" size="4" 
+                                          value="2018"></div>
+        </div>
+      </div>
+    </form>
+    
+  <div class="space-10"></div>
+  </div>
+  <div class="hr hr-dotted hr-20"></div>
+
+  <div class="hr hr-dotted hr-24"></div>
+
+  <div class="text-center">
+    <button type="button" class="btn btn-default btn-round btn-white">
+      <i class="ace-icon fa fa-remove red2"></i>
+      Limpiar
+    </button>
+
+    <button type="button" class="btn btn-default btn-round btn-white">
+      <i class="ace-icon fa fa-refresh green"></i>
+      Imprimir
+    </button>
+  </div>
+
+  <div class="space-4"></div>
+</div>

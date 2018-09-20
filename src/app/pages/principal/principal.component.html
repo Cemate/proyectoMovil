@@ -7,62 +7,8 @@
               </div>
 
               <div class="col-xs-12 col-sm-9">
-                <!-- <div class="row">
-                  <div class="search-area well col-xs-12">
-                    <div class="pull-left">
-                      <b class="text-primary">Desplegar</b>
-
-                      &nbsp;
-                      <div id="toggle-result-format" class="btn-group btn-overlap" data-toggle="buttons">
-                        <label title="Thumbnail view" class="btn btn-lg btn-white btn-success active" data-class="btn-success" aria-pressed="true">
-                          <input type="radio" value="2" autocomplete="off" />
-                          <i class="icon-only ace-icon fa fa-th"></i>
-                        </label>
-
-                        <label title="List view" class="btn btn-lg btn-white btn-grey" data-class="btn-primary">
-                          <input type="radio" value="1" checked="" autocomplete="off" />
-                          <i class="icon-only ace-icon fa fa-list"></i>
-                        </label>
-
-                        <label title="Map view" class="btn btn-lg btn-white btn-grey" data-class="btn-warning">
-                          <input type="radio" value="3" autocomplete="off" />
-                          <i class="icon-only ace-icon fa fa-crosshairs"></i>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="pull-right">
-                      <b class="text-primary">Orden</b>
-
-                      &nbsp;
-                      <select>
-                        <option>Relevance</option>
-                        <option>Newest First</option>
-                        <option>Rating</option>
-                      </select>
-                    </div>
-                  </div>
-                </div> -->
-
-                <div class="row">
-                  <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let formato of formatos; let i = index" (click)="escogerFormato(i)">
-                    <div class="thumbnail search-thumbnail animated fadeIn ">
-                      
-                      <img class="media-object" style="width: 100px; height: 200;" src="../../../assets/images/formatos/{{formato.imagen}}.jpg" />
-                      <div class="caption">
-
-                        <h4 class="search-title">
-                          <a routerLink="['/home/formato', i]" class="blue">{{formato.nombre}}</a>
-                          - {{buscar}}
-                        </h4>
-                        <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam ...</p> -->
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="space-12"></div>
+                <app-formatos></app-formatos>
+                <!-- <div class="space-12"></div> -->
               </div>
             </div>
           </div>

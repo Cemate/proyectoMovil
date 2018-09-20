@@ -1,7 +1,7 @@
-<div class="search-area well well-sm">
+<div class="search-area well well-sm oculto-impresion">
   <div class="search-filter-header bg-primary">
     <h5 class="smaller no-margin-bottom">
-      <i class="ace-icon fa fa-sliders light-green bigger-130"></i>&nbsp; Refine your Search
+      <i class="ace-icon fa fa-sliders light-green bigger-130"></i>&nbsp; Buscar formato
     </h5>
   </div>
 
@@ -13,8 +13,12 @@
         <div class="input-group">
           <input type="text" 
                   class="form-control" 
-                  name="keywords" 
-                  placeholder="Look within results"
+                  name="termino"
+                  value="{{_formato.busqueda}}"
+                  #buscarTexto
+                  [(ngModel)]="termino"
+                  placeholder="Formato"
+                  (keyup)="buscar(buscarTexto.value)"
            />
           <div class="input-group-btn">
             <button type="button" class="btn btn-default no-border btn-sm">

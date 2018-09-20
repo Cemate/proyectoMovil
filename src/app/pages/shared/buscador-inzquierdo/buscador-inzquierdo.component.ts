@@ -1,3 +1,4 @@
+import { FormatoService } from './../../../services/formato.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuscadorInzquierdoComponent implements OnInit {
 
-  constructor() { }
+  termino: string;
+
+  constructor(public _formato: FormatoService) { }
 
   ngOnInit() {
+  }
+
+  buscar(termino: string) {
+    this._formato.cambiarBusqueda(termino);
   }
 
 }

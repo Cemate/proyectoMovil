@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormatoService } from '../../services/formato.service';
-import { Formato } from './../../interfaces/formato.interface';
-import { Router } from '@angular/router';
+import { FormatosComponent } from './formatos/formatos.component';
+import { BuscadorInzquierdoComponent } from './../shared/buscador-inzquierdo/buscador-inzquierdo.component';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-principal',
@@ -9,19 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
-  formatos: Formato[];
-  buscar: string;
 
-  constructor(private _formato: FormatoService,
-              private router: Router) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.formatos = this._formato.getFormatos();
   }
-
-  escogerFormato(id: number) {
-    this.router.navigate( ['/home/formato', id] );
-  }
-
 }

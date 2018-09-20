@@ -1,5 +1,5 @@
 export interface Formato {
     id: number;
-    nombre: string;
-    imagen: string;
+    nombre?: string;
+    imagen?: string;
 }

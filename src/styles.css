@@ -41,3 +41,14 @@
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
   }
+
+  /* Impresión */
+  @media print{
+    .oculto-impresion, .oculto-impresion *{
+      display: none !important;
+    }
+
+    .centrar-impesion{
+      text-align: center;
+    }
+  }

@@ -1,7 +1,7 @@
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PrincipalComponent } from './pages/principal/principal.component';
-import { FormatoComponent } from './pages/formato/formato.component';
+import { FormatoComponent } from './pages/principal/formato/formato.component';
 
 const app_routes: Routes = [
     // { path: 'formatos', component: PrincipalComponent},

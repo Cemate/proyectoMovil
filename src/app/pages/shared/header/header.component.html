@@ -80,7 +80,13 @@
 
         <form class="navbar-form navbar-left form-search" role="search">
           <div class="form-group">
-            <input style="width: 200px; font-size: 16px;" type="text" placeholder="search" />
+            <input 
+              #buscarTexto
+              placeholder="Formato"
+              (keyup)="buscar(buscarTexto.value)" 
+              style="width: 200px; font-size: 16px;" 
+              type="text"
+              />
           </div>
 
           <button type="button" class="btn btn-mini btn-info2">
