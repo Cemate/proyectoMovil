@@ -7,3 +7,6 @@
 .cuerpo-formato h3{
     text-align: justify;
 }
+
+@media print {
+}

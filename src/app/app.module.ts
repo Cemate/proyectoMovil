@@ -15,6 +15,7 @@ import { BuscadorInzquierdoComponent } from './pages/shared/buscador-inzquierdo/
 import { DatosFormatoComponent } from './pages/principal/formato/datos-formato/datos-formato.component';
 import { FormatosComponent } from './pages/principal/formatos/formatos.component';
 import { FormatoPipe } from './pipes/formato.pipe';
+import { OrigenVecindadComponent } from './pages/principal/formato/tipos/origen-vecindad/origen-vecindad.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormatoPipe } from './pipes/formato.pipe';
     DatosFormatoComponent,
     FormatosComponent,
     FormatoPipe,
+    OrigenVecindadComponent,
   ],
   imports: [
     FormsModule,
