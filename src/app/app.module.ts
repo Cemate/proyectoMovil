@@ -16,6 +16,9 @@ import { DatosFormatoComponent } from './pages/principal/formato/datos-formato/d
 import { FormatosComponent } from './pages/principal/formatos/formatos.component';
 import { FormatoPipe } from './pipes/formato.pipe';
 import { OrigenVecindadComponent } from './pages/principal/formato/tipos/origen-vecindad/origen-vecindad.component';
+import { NombramientoComponent } from './pages/principal/formato/tipos/nombramiento/nombramiento.component';
+import { LiberacionServicioComponent } from './pages/principal/formato/tipos/liberacion-servicio/liberacion-servicio.component';
+import { HeaderFormatosComponent } from './pages/principal/formato/tipos/header-formatos/header-formatos.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { OrigenVecindadComponent } from './pages/principal/formato/tipos/origen-
     FormatosComponent,
     FormatoPipe,
     OrigenVecindadComponent,
+    NombramientoComponent,
+    LiberacionServicioComponent,
+    HeaderFormatosComponent,
   ],
   imports: [
     FormsModule,

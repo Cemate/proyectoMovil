@@ -17,7 +17,7 @@ export class FormatoComponent implements OnInit {
 
   ngOnInit() {
     this.actRoute.params.subscribe( params => {
-      this.formato = this._formato.getFormato( params['id']);
+      this.formato = this._formato.getFormato();
       console.log(this.formato);
      });
     }

@@ -16,34 +16,63 @@
           <div>
             <input autofocus 
                     type="text" 
-                    id="nombre" 
+                    id="nombre"
+                    name="nombre"
+                    [(ngModel)]="nombre"
                     placeholder="Nombre completo" 
                     class="col-xs-10 col-sm-12" />
           </div>
       </div>
+
       <div class="form-group" style="margin-top: 6px;">
           <label class="">Sexo</label>
 
           <div class="radio" style="margin-top: -3px">
             <label>
-              <input name="sexo" type="radio" class="ace" checked="checked" />
+              <input name="sexo" 
+                      type="radio" 
+                      class="ace" 
+                      checked="checked" 
+                      [(ngModel)]="sexo" 
+                      value="hombre"
+                      (keyup)="actNombre()"/>
               <span class="lbl">Hombre</span>
             </label>
             <label>
-              <input name="sexo" type="radio" class="ace" />
+              <input name="sexo" 
+                    type="radio" 
+                    class="ace" 
+                    [(ngModel)]="sexo" 
+                    value="mujer"/>
               <span class="lbl">Mujer</span>
             </label>
           </div>
       </div>
 
       <div class="form-group">
+          <label for="edad">Edad </label>
+
+          <div>
+            <input type="text" 
+                    id="edad"
+                    name="edad"
+                    [(ngModel)]="edad"
+                    placeholder="Edad"
+                    value="18" 
+                    class="col-xs-10 col-sm-12" />
+          </div>
+      </div>
+
+      <div class="form-group">
         <label for="localidad"> Localidad </label>
           <div>
-            <input autofocus 
-                    type="text" 
+            <input  type="text" 
                     id="localidad" 
                     placeholder="Localidad" 
-                    class="col-xs-10 col-sm-12" />
+                    class="col-xs-10 col-sm-12" 
+                    name="localidad" 
+                    [(ngModel)]="localidad" 
+                    (keyup)="valor()"/>
           </div>
       </div>
 
@@ -53,26 +82,31 @@
             <input type="text" id="periodo" 
             placeholder="Periodo" 
             class="col-xs-10 col-sm-12" 
-            value="periodo 2018"/>
+            value="periodo 2018"
+            name="periodo" [(ngModel)]="periodo"/>
         </div>
       </div>
       <!-- Nombrado -->
       <div class="form-group">
         <label for="nombrado" class=" sepElemForm"> Nombrado </label>
           <div>
-            <input autofocus 
+            <input
                     type="text" 
                     id="nombrado" 
-                    placeholder="Nombrado" 
-                    class="col-xs-10 col-sm-12" />
+                    placeholder="Nombrado"
+                    class="col-xs-10 col-sm-12" 
+                    name="nombrado"
+                    [(ngModel)]="nombrado"/>
           </div>
       </div>
       <div class="form-group">
           <label for="fecha"  class="sepElemForm">Fecha de expedición</label>
         <div class="row">
-            <div class="col-sm-2"><input type="text" name="dia" id="dia" minlength="1" maxlength="31" size="2" ></div>
+            <div class="col-sm-2">
+              <input type="text" name="dia" id="dia" [(ngModel)]="dia" minlength="1" maxlength="31" size="2">
+            </div>
             <div class="col-sm-6">
-              <select name="mes" id="mes">
+              <select name="mes" id="mes" [(ngModel)]="mes">
                 <option value="ENERO">ENERO</option>
                 <option value="FEBRERO">FEBRERO</option>
                 <option value="MARZO">MARZO</option>
@@ -87,7 +121,7 @@
                 <option value="DICIEMBRE">DICIEMBRE</option>
               </select>
             </div>
-            <div class="col-sm-4"><input type="text" name="anio" id="anio" minlength="2018" maxlength="2019" size="4" 
+            <div class="col-sm-4"><input type="text" name="anio" [(ngModel)]="anio" id="anio" minlength="2018" maxlength="2019" size="4" 
                                           value="2018"></div>
         </div>
       </div>

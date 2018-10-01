@@ -22,6 +22,7 @@ export class FormatosComponent implements OnInit {
 
   escogerFormato(id: number) {
     this.router.navigate( ['/home/formato', id] );
+    this._formato.id = id;
   }
 
 }
