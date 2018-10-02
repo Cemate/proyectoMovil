@@ -1,5 +1,6 @@
-import { DatosService } from './../../../../services/datos.service';
+import { FormatoService } from './../../../../services/formato.service';
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from './../../../../services/datos.service';
 
 @Component({
   selector: 'app-datos-formato',
@@ -8,17 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatosFormatoComponent implements OnInit {
   nombre: string;
-  sexo: string;
+  sexo = 'hombre';
   edad: string;
   localidad = 'Buenavista Loxicha';
-  periodo = 'periodo 2018';
-  nombrado = 'de manera voluntaria';
+  periodo = 'año 2018';
+  nombrado = 'en una reunion';
+  nombramiento: string;
 
   dia = 1;
   mes = 'OCTUBRE';
   anio = '2018';
 
-  constructor( public _datosFormato: DatosService) { }
+  tamFuente = 12;
+
+  constructor( public _datosFormato: DatosService,
+               public _formato: FormatoService) {
+  }
 
   ngOnInit() {
   }
@@ -26,8 +32,8 @@ export class DatosFormatoComponent implements OnInit {
   actNombre() {
     this._datosFormato.nombre = this.nombre;
   }
-  actSexo() {
-    this._datosFormato.sexo = this.sexo;
+  actSexo(sexo: string) {
+    this._datosFormato.sexo = sexo;
   }
   actEdad() {
     this._datosFormato.edad = this.edad;
@@ -37,6 +43,9 @@ export class DatosFormatoComponent implements OnInit {
   }
   actPeriodo() {
     this._datosFormato.periodo = this.periodo;
+  }
+  actNombramiento() {
+    this._datosFormato.nombramiento = this.nombramiento;
   }
   actNombrado() {
     this._datosFormato.nombrado = this.nombrado;
@@ -51,4 +60,12 @@ export class DatosFormatoComponent implements OnInit {
     this._datosFormato.anio = this.anio;
   }
 
+  onPrint() {
+    window.print();
+  }
+
+  actFuente() {
+    this._datosFormato.tamFuente = this.tamFuente;
+    console.log(this.tamFuente);
+  }
 }

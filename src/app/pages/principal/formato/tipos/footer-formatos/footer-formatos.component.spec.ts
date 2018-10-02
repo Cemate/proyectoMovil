@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NombramientoComponent } from './nombramiento.component';
+import { FooterFormatosComponent } from './footer-formatos.component';
 
-describe('NombramientoComponent', () => {
-  let component: NombramientoComponent;
-  let fixture: ComponentFixture<NombramientoComponent>;
+describe('FooterFormatosComponent', () => {
+  let component: FooterFormatosComponent;
+  let fixture: ComponentFixture<FooterFormatosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NombramientoComponent ]
+      declarations: [ FooterFormatosComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NombramientoComponent);
+    fixture = TestBed.createComponent(FooterFormatosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

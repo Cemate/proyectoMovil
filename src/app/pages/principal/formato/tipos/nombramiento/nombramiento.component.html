@@ -1,3 +1,44 @@
-<p>
-  nombramiento works!
-</p>
+<div>
+    <div class="row">
+        <app-header-formatos></app-header-formatos>
+    </div>
+  <div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+      <p style="margin-bottom: 0.0001pt; text-indent: 35.4pt; text-align: right;"><span style="line-height: 107%;">&nbsp;ASUNTO: <strong>NOMBRAMIENTO</strong></span></p>
+      <p style="text-decoration-line: underline"><span style="line-height: 107%;"> {{ _datos.nombre | uppercase}}.</span></p>
+      <p><strong><span style="line-height: 107%;">{{ _datos.localidad | uppercase }}</span></strong></p>
+      <p><span style="line-height: 107%;">P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E</span></p>
+      <p style="margin-bottom: .0001pt;"><span style="line-height: 107%;">&nbsp;</span></p>
+      
+      <div *ngIf="_datos.sexo == 'hombre'; else elseBlock">
+          <p style="text-align: justify; text-indent: 35.4pt;"><span style="line-height: 107%; color: #262626;">EL QUE SUSCRIBE C. <strong>LIC. GASPAR MELCHOR MONJARAZ JOSE</strong> AGENTE MUNICIPAL CONSTITUCIONAL DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES QUE LA LEY ORGANICA MUNICIPAL VIGENTE EN EL ESTADO DE OAXACA ME OTORGA, TENGO A BIEN EXPEDIR EL PRESENTE NOMBRAMIENTO QUE LO ACREDITA COMO:</span></p>
+          <p style="text-align: center; text-indent: 35.4pt;"><strong><span style="line-height: 107%; color: #262626;">{{_datos.nombramiento | uppercase}}</span></strong></p>
+          <p style="text-align: justify; text-indent: 35.4pt;"><span style="line-height: 107%; color: #262626;">YA QUE FUE NOMBRADO {{_datos.nombrado | uppercase}} QUE SE SOSTUVO CON ANTERIORIDAD, DICHO CARGO DEBERA DESEMPE&Ntilde;ARLO DURANTE EL <strong>{{_datos.periodo | uppercase}}</strong>, POR LO CUAL REPRESENTA UN ALTO SENTIDO DE RESPONSABILIDAD Y AHINCO, POR LO QUE SE EXHORTA A CUMPLIR CON FIEL Y PATRIOTICAMENTE EL SERVICIO QUE EL PUEBLO LE HA CONFERIDO.</span></p>    
+      </div>
+    <ng-template #elseBlock>
+        <p style="text-align: justify; text-indent: 35.4pt;"><span style="line-height: 107%; color: #262626;">EL QUE SUSCRIBE C. <strong>LIC. GASPAR MELCHOR MONJARAZ JOSE</strong> AGENTE MUNICIPAL CONSTITUCIONAL DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES QUE LA LEY ORGANICA MUNICIPAL VIGENTE EN EL ESTADO DE OAXACA ME OTORGA, TENGO A BIEN EXPEDIR EL PRESENTE NOMBRAMIENTO QUE LA ACREDITA COMO:</span></p>
+        <p style="text-align: center; text-indent: 35.4pt;"><strong><span style="line-height: 107%; color: #262626;">{{_datos.nombramiento | uppercase}}</span></strong></p>
+        <p style="text-align: justify; text-indent: 35.4pt;"><span style="line-height: 107%; color: #262626;">YA QUE FUE NOMBRADA {{_datos.nombrado | uppercase}} QUE SE SOSTUVO CON ANTERIORIDAD, DICHO CARGO DEBERA DESEMPE&Ntilde;ARLO DURANTE EL <strong>{{_datos.periodo | uppercase}}</strong>, POR LO CUAL REPRESENTA UN ALTO SENTIDO DE RESPONSABILIDAD Y AHINCO, POR LO QUE SE EXHORTA A CUMPLIR CON FIEL Y PATRIOTICAMENTE EL SERVICIO QUE EL PUEBLO LE HA CONFERIDO.</span></p>  
+    </ng-template>
+
+      <p style="text-align: justify; text-indent: 35.4pt;"><span style="line-height: 107%; color: #262626;">SE EXPIDE EL PRESENTE NOMBRAMIENTO EN LAS INSTALACIONES QUE OCUPA LA AGENCIA MUNICIPAL DE BUENAVISTA LOXICHA, Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXTIENDE EL PRESENTE NOMBRAMIENTO A LOS <strong>{{_datos.dia}}</strong> DIAS DEL MES DE {{_datos.mes | uppercase}} DEL A&Ntilde;O {{_datos.anio}}.&nbsp; </span></p>
+    <app-footer-formatos></app-footer-formatos>
+  </div>
+</div>
+<!-- 
+<div>
+    <div class="row">
+        <app-header-formatos></app-header-formatos>
+    </div>
+  <div class="">
+      <p style="margin-bottom: 0.0001pt; text-indent: 35.4pt; text-align: right;"><span style="font-size: 12.0pt; line-height: 107%;">&nbsp;<span style="font-family: calibri, sans-serif;">ASUNTO: <strong>NOMBRAMIENTO</strong></span></span></p>
+<p><span style="font-family: calibri, sans-serif;"><u> AMADO JOS&Eacute; JOS&Eacute;.</u></span></p>
+<p><span style="font-family: calibri, sans-serif;"><strong>BUENAVISTA LOXICHA</strong></span></p>
+<p><span style="font-family: calibri, sans-serif;">P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E</span></p>
+<p style="margin-bottom: .0001pt;"><span style="font-size: 12pt; line-height: 107%; font-family: calibri, sans-serif;">&nbsp;</span></p>
+<p style="text-align: justify; text-indent: 35.4pt;"><span style="font-size: 12pt; line-height: 107%; color: #262626; font-family: calibri, sans-serif;">EL QUE SUSCRIBE C. <strong>LIC. GASPAR MELCHOR MONJARAZ JOSE</strong> AGENTE MUNICIPAL CONSTITUCIONAL DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES QUE LA LEY ORGANICA MUNICIPAL VIGENTE EN EL ESTADO DE OAXACA ME OTORGA, TENGO A BIEN EXPEDIR EL PRESENTE NOMBRAMIENTO QUE LO ACREDITA COMO:</span></p>
+<p style="text-align: center; text-indent: 35.4pt;"><span style="font-family: calibri, sans-serif;"><strong><span style="font-size: 12.0pt; line-height: 107%; color: #262626;">VOCAL DEL COMIT&Eacute; DE LA UNIDAD M&Eacute;DICA RURAL</span></strong></span></p>
+<p style="text-align: justify; text-indent: 35.4pt;"><span style="font-size: 12pt; line-height: 107%; color: #262626; font-family: calibri, sans-serif;">YA QUE FUE NOMBRADO EN UNA REUNION QUE SE SOSTUVO CON ANTERIORIDAD, DICHO CARGO DEBERA DESEMPE&Ntilde;ARLO DURANTE EL <strong>A&Ntilde;O 2018</strong>, POR LO CUAL REPRESENTA UN ALTO SENTIDO DE RESPONSABILIDAD Y AHINCO, POR LO QUE SE EXHORTA A CUMPLIR CON FIEL Y PATRIOTICAMENTE EL SERVICIO QUE EL PUEBLO LE HA CONFERIDO.</span></p>
+<p style="text-align: justify; text-indent: 35.4pt;"><span style="font-size: 12pt; line-height: 107%; color: #262626; font-family: calibri, sans-serif;">SE EXPIDE EL PRESENTE NOMBRAMIENTO EN LAS INSTALACIONES QUE OCUPA LA AGENCIA MUNICIPAL DE BUENAVISTA LOXICHA, Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXTIENDE EL PRESENTE NOMBRAMIENTO A LOS <strong>09</strong> DIAS DEL MES DE ENERO DEL A&Ntilde;O DOS MIL DIECIOCHO.</span></p>
+    <app-footer-formatos></app-footer-formatos>
+  </div>
+</div> -->

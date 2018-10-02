@@ -6,7 +6,7 @@ import { Formato } from './../interfaces/formato.interface';
 })
 export class FormatoService {
 
-  id= 1;
+  id;
   busqueda = '';
   formatosFiltrados: any = [];
 
@@ -24,6 +24,11 @@ export class FormatoService {
     {
       id: 3,
       nombre: 'C. de nombramiento',
+      imagen: 'nombramiento'
+    },
+    {
+      id: 4,
+      nombre: 'Citatorio Escuela',
       imagen: 'nombramiento'
     }
   ];

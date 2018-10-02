@@ -1,3 +1,28 @@
-<p>
-  liberacion-servicio works!
-</p>
+<div>
+    <div class="row">
+        <app-header-formatos></app-header-formatos>
+    </div>
+  <div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+    <p style="text-align: right;"><strong><span style="">ASUNTO:</span></strong><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONSTANCIA DE SERVICIO.</span></p>
+
+<p><span style="">A QUIEN CORRESPONDA:</span></p>
+<p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EL QUE SUSCRIBE C. LIC. GASPAR MELCHOR MONJARAZ JOSÉ, AGENTE MUNICIPAL CONSTITUCIONAL DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES QUE LA LEY ORGANICA MUNICIPAL ME OTORGA, ME PERMITO EXTENDER LA PRESENTE:</span></p>
+<p style="text-align: justify;"><span style="">&nbsp;</span></p>
+<p style="text-align: center;"><strong><span style="font-size: 14.0pt; ">CONSTANCIA DE TERMINACION DE SERVICIO</span></strong></p>
+<p style="text-align: justify;"><span style="">&nbsp;</span></p>
+
+<div *ngIf="_datos.sexo === 'hombre'; else elseBlock">
+    <p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AL C. {{_datos.nombre | uppercase}}, ORIGINARIO Y VECINO DE ESTA POBLACION, QUIEN CUMPLIO DEBIDAMENTE CON SU SERVICIO DE: {{_datos.nombramiento | uppercase}}, DURANTE EL {{_datos.periodo | uppercase}}.</span></p>
+    <p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POR LO QUE A PETICION DEL INTERESADO Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXPIDE LA PRESENTE CONSTANCIA EN LA AGENCIA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA, A LOS {{_datos.dia}} DIAS DEL MES DE {{_datos.mes | uppercase}} DEL A&Ntilde;O {{_datos.anio}}.</span></p>
+
+  </div>
+    <ng-template #elseBlock><p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A LA C. {{_datos.nombre | uppercase}}, ORIGINARIA Y VECINA DE ESTA POBLACION, QUIEN CUMPLIO DEBIDAMENTE CON SU SERVICIO DE: {{_datos.nombramiento | uppercase}}, DURANTE EL {{_datos.periodo | uppercase}}.</span></p>
+      <p style="text-align: justify;"><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; POR LO QUE A PETICION DE LA INTERESADA Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXPIDE LA PRESENTE CONSTANCIA EN LA AGENCIA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA, A LOS {{_datos.dia}} DIAS DEL MES DE {{_datos.mes | uppercase}} DEL A&Ntilde;O {{_datos.anio}}.</span></p>
+
+    </ng-template>
+
+<p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>
+        
+    <app-footer-formatos></app-footer-formatos>
+  </div>
+</div>

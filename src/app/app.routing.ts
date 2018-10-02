@@ -1,3 +1,4 @@
+import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/citatorio-escuelas/citatorio-escuelas.component';
 import { LiberacionServicioComponent } from './pages/principal/formato/tipos/liberacion-servicio/liberacion-servicio.component';
 import { OrigenVecindadComponent } from './pages/principal/formato/tipos/origen-vecindad/origen-vecindad.component';
 import { NgModule, Component } from '@angular/core';
@@ -12,9 +13,10 @@ const app_routes: Routes = [
     { path: 'home', children: [
         { path: '', component: PrincipalComponent},
         { path: 'formato', component: FormatoComponent, children: [
-            { path: '0', component: OrigenVecindadComponent},
-            { path: '1', component: NombramientoComponent},
+            { path: '1', component: OrigenVecindadComponent},
             { path: '2', component: LiberacionServicioComponent},
+            { path: '3', component: NombramientoComponent},
+            { path: '4', component: CitatorioEscuelasComponent},
         ] }
     ]},
     // { path: 'formato/:id', component: FormatoComponent},

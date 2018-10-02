@@ -8,13 +8,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./origen-vecindad.component.css']
 })
 export class OrigenVecindadComponent implements OnInit {
-  nombre = this._datos.nombre;
-  sexo = this._datos.sexo;
-  edad = this._datos.edad;
-  dia = this._datos.dia;
-  mes = this._datos.mes;
-  anio = this._datos.anio;
-
   constructor( public _datos: DatosService) { }
 
   ngOnInit() {
@@ -25,7 +18,7 @@ export class OrigenVecindadComponent implements OnInit {
       //     div.animate({fontSize: '5em'}, "slow");
       // });
       // $(function() { $('textarea').froalaEditor(); });
-    // });
+    // })
   }
 
 }

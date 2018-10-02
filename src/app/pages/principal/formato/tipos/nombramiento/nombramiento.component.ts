@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from '../../../../../services/datos.service';
+import { FormatoService } from '../../../../../services/formato.service';
 
 @Component({
   selector: 'app-nombramiento',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NombramientoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _datos: DatosService,
+              public _formato: FormatoService) { }
 
   ngOnInit() {
   }

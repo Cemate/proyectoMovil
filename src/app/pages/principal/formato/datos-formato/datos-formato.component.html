@@ -14,13 +14,16 @@
           <label for="nombre"> Nombre </label>
 
           <div>
-            <input autofocus 
+            <input autofocus
+                    style="text-transform:uppercase;"
                     type="text" 
                     id="nombre"
                     name="nombre"
                     [(ngModel)]="nombre"
                     placeholder="Nombre completo" 
-                    class="col-xs-10 col-sm-12" />
+                    class="col-xs-10 col-sm-12"
+                    (keyup)="actNombre()"
+                    />
           </div>
       </div>
 
@@ -28,32 +31,32 @@
           <label class="">Sexo</label>
 
           <div class="radio" style="margin-top: -3px">
-            <label>
+            <label 
+            (click)="actSexo('hombre')">
               <input name="sexo" 
                       type="radio" 
                       class="ace" 
                       checked="checked" 
-                      [(ngModel)]="sexo" 
-                      value="hombre"
-                      (keyup)="actNombre()"/>
+                      value="hombre"/>
               <span class="lbl">Hombre</span>
             </label>
-            <label>
+            <label 
+            (click)="actSexo('mujer')">
               <input name="sexo" 
                     type="radio" 
-                    class="ace" 
-                    [(ngModel)]="sexo" 
-                    value="mujer"/>
+                    class="ace"
+                    value="mujer" />
               <span class="lbl">Mujer</span>
             </label>
           </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" *ngIf="_formato.id == 0">
           <label for="edad">Edad </label>
 
           <div>
-            <input type="text" 
+            <input  (keyup)="actEdad()"
+                    type="text" 
                     id="edad"
                     name="edad"
                     [(ngModel)]="edad"
@@ -63,49 +66,131 @@
           </div>
       </div>
 
+
+      <div *ngIf="_formato.id === 2 || _formato.id === 1">
+
       <div class="form-group">
         <label for="localidad"> Localidad </label>
           <div>
-            <input  type="text" 
+            <input  (keyup)="actLocalidad()"
+                    style="text-transform:uppercase;"
+                    type="text" 
                     id="localidad" 
                     placeholder="Localidad" 
                     class="col-xs-10 col-sm-12" 
                     name="localidad" 
                     [(ngModel)]="localidad" 
-                    (keyup)="valor()"/>
+                    />
           </div>
       </div>
+      
+      <!-- Nombramiento -->
+      <div class="form-group">
+          <label for="nombramiento" class=" sepElemForm"> Nombramiento </label>
+            <div>
+              <input
+                      type="text" style="text-transform:uppercase;"
+                      id="nombramiento" 
+                      placeholder="Nombramiento"
+                      class="col-xs-10 col-sm-12" 
+                      name="nombramiento"
+                      [(ngModel)]="nombramiento"
+                      (keyup)="actNombramiento()"/>
+            </div>
+            <select class="form-control" (click)="actNombramiento()" name="nombramiento" id="servicio" [(ngModel)]="nombramiento">
+                <option value="">------ CABILDO ------</option>
+                <option value="SUPLENTE DE ESTA AGENCIA MUNICIPAL">SUPLENTE</option>
+                <option value="TESORERO DE ESTA AGENCIA MUNICIPAL">TESORERO</option>
+                <option value="ALCALDE UNICO CONSTITUCIONAL">ALCALDE UNICO CONSTITUCIONAL</option>
+                <option value="SUPLENTE DEL ALCALDE UNICO CONSTITUCIONAL">SUPLENTE DEL ALCALDE UNICO CONSTITUCIONAL</option>
+                <option value="ALCALDE SEGUNDO DE ESTA AGENCIA MUNICIPAL">ALCALDE SEGUNDO</option>
+                <option value="SINDICO DE ESTA AGENCIA MUNICIPAL">SINDICO</option>
+                <option value="SUPLENTE DE SINDICO DE ESTA AGENCIA MUNICIPAL">SUPLENTE DE SINDICO</option>
+                <option value="REGIDOR PRIMERO DE ESTA AGENCIA MUNICIPAL">REGIDOR PRIMERO</option>
+                <option value="REGIDOR SEGUNDO DE ESTA AGENCIA MUNICIPAL">REGIDOR SEGUNDO</option>
+                <option value="REGIDOR TERCERO DE ESTA AGENCIA MUNICIPAL">REGIDOR TERCERO</option>
+                <option value="REGIDOR CUARTO DE ESTA AGENCIA MUNICIPAL">REGIDOR CUARTO</option>
+                <option value="REGIDOR QUINTO DE ESTA AGENCIA MUNICIPAL">REGIDOR QUINTO</option>
+                <option value="REGIDOR SEXTO DE ESTA AGENCIA MUNICIPAL">REGIDOR SEXTO</option>
+                <option value="TENIENTE DE ESTA AGENCIA MUNICIPAL">TENIENTE</option>
+                <option value="TOPIL DE ESTA AGENCIA MUNICIPAL">TOPIL</option>
+                
+                <option value="">------ TEMPLO CATOLICO ------</option>
+
+                <option value="PRESIDENTE DEL COMITE DEL TEMPLO CATOLICO">PRESIDENTE</option>I
+                <option value="VICEPRESIDENTE DEL COMITE DEL TEMPLO CATOLICO">VICEPRESIDENTE</option>
+                <option value="SECRETARIO DEL COMITE DEL TEMPLO CATOLICO">SECRETARIO</option>
+                <option value="TESORERO DEL COMITE DEL TEMPLO CATOLICO">TESORERO</option>
+                <option value="PRIMER VOCAL DEL COMITE DEL TEMPLO CATOLICO">PRIMER VOCAL</option>
+                <option value="SEGUNDO VOCAL DEL COMITE DEL TEMPLO CATOLICO">SEGUNDO VOCAL</option>
+                <option value="TERCER VOCAL DEL COMITE DEL TEMPLO CATOLICO">TERCER VOCAL</option>
+                <option value="CUARTO VOCAL DEL COMITE DEL TEMPLO CATOLICO">CUARTO VOCAL</option>
+                <option value="QUINTO VOCAL DEL COMITE DEL TEMPLO CATOLICO">QUINTO VOCAL</option>
+                <option value="SEXTO VOCAL DEL COMITE DEL TEMPLO CATOLICO">SEXTO VOCAL</option>
+                <option value="FISCAL DEL COMITE DEL TEMPLO CATOLICO">FISCAL</option>
+                <option value="FISCAL DEL COMITE DEL TEMPLO CATOLICO">FISCAL</option>
+                <option value="FISCAL DEL COMITE DEL TEMPLO CATOLICO">FISCAL</option>
+
+                <option value=""><strong>------ AGUA POTABLE ------</strong> </option>
+                <option value="PRESIDENTE DEL COMITE DE AGUA POTABLE">PRESIDENTE</option>
+                <option value="VICEPRESIDENTE DEL COMITE DE AGUA POTABLE">VICEPRESIDENTE</option>
+                <option value="SECRETARIO DEL COMITE DE AGUA POTABLE">SECRETARIO</option>
+                <option value="TESORERO DEL COMITE DE AGUA POTABLE">TESORERO</option>
+                <option value="PRIMER VOCAL DEL COMITE DE AGUA POTABLE">PRIMER VOCAL</option>
+                <option value="SEGUNDO VOCAL DEL COMITE DE AGUA POTABLE">SUGUNDO VOCAL</option>
+                <option value="TERCER VOCAL DEL COMITE DE AGUA POTABLE">TERCER VOCAL</option>
+                <option value="CUARTO VOCAL DEL COMITE DE AGUA POTABLE">CUARTO VOCAL</option>
+                <option value="QUINTO VOCAL DEL COMITE DE AGUA POTABLE">QUINTO VOCAL</option>
+                <option value="SEXTO VOCAL DEL COMITE DE AGUA POTABLE">SEXTO VOCAL</option>
+                
+                <option value="">------ TIENDA DICONSA ------</option>
+                <option value="ENCARGADO DE LA TIENDA DICONSA">ENCARGADO</option>
+                <option value="PRESIDENTE DE LA TIENDA DICONSA">PRESIDENTE</option>
+                <option value="SECRETARIO DE LA TIENDA DICONSA">SECRETARIO</option>
+                <option value="TESORERO DE LA TIENDA DICONSA">TESORERO</option>
+                <option value="VOCAL PRIMERO DE LA TIENDA DICONSA">VOCAL PRIMERO</option>
+                <option value="VOCAL SEGUNDO DE LA TIENDA DICONSA">VOCAL SEGUNDO</option>
+                <option value="VOCAL TERCERO DE LA TIENDA DICONSA">VOCAL TERCERO</option>
+              </select>
+        </div>
 
       <div class="form-group">
         <label for="periodo" class=" sepElemForm">Periodo</label>
         <div>
-            <input type="text" id="periodo" 
-            placeholder="Periodo" 
+            <input type="text" id="periodo" style="text-transform:uppercase;"
+            placeholder="Periodo"
+            (keyup)="actPeriodo()"
             class="col-xs-10 col-sm-12" 
             value="periodo 2018"
             name="periodo" [(ngModel)]="periodo"/>
         </div>
       </div>
+      
       <!-- Nombrado -->
       <div class="form-group">
-        <label for="nombrado" class=" sepElemForm"> Nombrado </label>
+        <label for="nombrado" class="sepElemForm"> Nombrado </label>
           <div>
             <input
-                    type="text" 
+                    type="text" style="text-transform:uppercase;"
                     id="nombrado" 
                     placeholder="Nombrado"
                     class="col-xs-10 col-sm-12" 
                     name="nombrado"
-                    [(ngModel)]="nombrado"/>
+                    [(ngModel)]="nombrado"
+                    (keyup)="actNombrado()"/>
           </div>
       </div>
+      
+    </div>
+
+
       <div class="form-group">
           <label for="fecha"  class="sepElemForm">Fecha de expedición</label>
         <div class="row">
             <div class="col-sm-2">
-              <input type="text" name="dia" id="dia" [(ngModel)]="dia" minlength="1" maxlength="31" size="2">
+              <input type="text" name="dia" id="dia" [(ngModel)]="dia" (keyup)="actDia()" minlength="1" maxlength="31" size="2">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" (click)="actMes()">
               <select name="mes" id="mes" [(ngModel)]="mes">
                 <option value="ENERO">ENERO</option>
                 <option value="FEBRERO">FEBRERO</option>
@@ -121,8 +206,13 @@
                 <option value="DICIEMBRE">DICIEMBRE</option>
               </select>
             </div>
-            <div class="col-sm-4"><input type="text" name="anio" [(ngModel)]="anio" id="anio" minlength="2018" maxlength="2019" size="4" 
-                                          value="2018"></div>
+            <div class="col-sm-4">
+              <input type="text" name="anio" 
+              [(ngModel)]="anio" id="anio"
+              (keyup)="actAnio()"
+              minlength="2018" maxlength="2019" size="4" 
+              value="2018">
+            </div>
         </div>
       </div>
     </form>
@@ -139,11 +229,23 @@
       Limpiar
     </button>
 
-    <button type="button" class="btn btn-default btn-round btn-white">
+    <button type="button" (click)="onPrint()" class="btn btn-default btn-round btn-white">
       <i class="ace-icon fa fa-refresh green"></i>
       Imprimir
     </button>
   </div>
+  <hr>
+  <button (click)="_datosFormato.fuente = 'calibri, sans-serif'" type="button" class="btn btn-default btn-round btn-white">
+    Calibri
+  </button>
+  
+  <button (click)="_datosFormato.fuente = 'verdana, geneva'" type="button" class="btn btn-default btn-round btn-white">
+    Verdana
+  </button>
+  <button (click)="_datosFormato.fuente = 'arial, helvetica, sans-serif'" type="button" class="btn btn-default btn-round btn-white">
+    Arial
+  </button>
+  <input type="number" name="tamFuente" id="tamFuente" [(ngModel)]="tamFuente" value="12" (click)="actFuente()" (keyup)="actFuente()">
 
   <div class="space-4"></div>
 </div>

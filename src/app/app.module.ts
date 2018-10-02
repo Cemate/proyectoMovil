@@ -19,6 +19,8 @@ import { OrigenVecindadComponent } from './pages/principal/formato/tipos/origen-
 import { NombramientoComponent } from './pages/principal/formato/tipos/nombramiento/nombramiento.component';
 import { LiberacionServicioComponent } from './pages/principal/formato/tipos/liberacion-servicio/liberacion-servicio.component';
 import { HeaderFormatosComponent } from './pages/principal/formato/tipos/header-formatos/header-formatos.component';
+import { FooterFormatosComponent } from './pages/principal/formato/tipos/footer-formatos/footer-formatos.component';
+import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/citatorio-escuelas/citatorio-escuelas.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { HeaderFormatosComponent } from './pages/principal/formato/tipos/header-
     NombramientoComponent,
     LiberacionServicioComponent,
     HeaderFormatosComponent,
+    FooterFormatosComponent,
+    CitatorioEscuelasComponent,
   ],
   imports: [
     FormsModule,
