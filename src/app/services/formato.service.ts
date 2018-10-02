@@ -6,7 +6,7 @@ import { Formato } from './../interfaces/formato.interface';
 })
 export class FormatoService {
 
-  id;
+  id: number;
   busqueda = '';
   formatosFiltrados: any = [];
 
@@ -41,7 +41,7 @@ export class FormatoService {
   }
 
   getFormato() {
-    return this.formatos[this.id];
+    return this.formatos[this.id - 1];
   }
 
   cambiarBusqueda(termino: string) {
