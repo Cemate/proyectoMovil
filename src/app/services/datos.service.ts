@@ -4,10 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DatosService {
+  director = 'DIRECTOR DE LA ESCUELA';
+  comite = 'COMITE DE PADRES DE FAMILIA';
+  escuela = 'ESC. PRIMARIA';
+  fechaCita = 'MARTES 16 DE OCTUBRE DEL PRESENTE AÑO A LAS 4:00 DE LA TARDE';
+  activarComite: any;
 
   constructor() {
-  console.log(this.localidad);
-   }
+  }
 
   fuente = 'verdana, geneva';
   tamFuente = 12;
@@ -15,7 +19,7 @@ export class DatosService {
   nombre: string;
   sexo = 'hombre';
   edad: string;
-  localidad = 'Buenavista Loxicha';
+  localidad = 'BUENAVISTA LOXICHA';
   periodo = 'año 2018';
   nombramiento = 'Presidente';
   nombrado = 'en una reunion';

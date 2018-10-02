@@ -8,6 +8,7 @@ import { DatosService } from './../../../../services/datos.service';
   styleUrls: ['./datos-formato.component.css']
 })
 export class DatosFormatoComponent implements OnInit {
+  director: 'DIRECTOR DE LA ESCUELA';
   nombre: string;
   sexo = 'hombre';
   edad: string;
@@ -16,14 +17,20 @@ export class DatosFormatoComponent implements OnInit {
   nombrado = 'en una reunion';
   nombramiento: string;
 
+  // datos citatorio
+  activarCom;
+  comite: string;
+  escuela: 'ESC. PRIMARIA';
+  fechaCita: string;
+
   dia = 1;
   mes = 'OCTUBRE';
   anio = '2018';
 
   tamFuente = 12;
 
-  constructor( public _datosFormato: DatosService,
-               public _formato: FormatoService) {
+  constructor(public _datosFormato: DatosService,
+    public _formato: FormatoService) {
   }
 
   ngOnInit() {
@@ -50,6 +57,26 @@ export class DatosFormatoComponent implements OnInit {
   actNombrado() {
     this._datosFormato.nombrado = this.nombrado;
   }
+  actComite() {
+    this._datosFormato.comite = this.comite;
+  }
+
+  actdirector() {
+    this._datosFormato.director = this.director;
+  }
+
+  toggleVisibility(e) {
+    this.activarCom =  e.target.checked;
+    this._datosFormato.activarComite = this.activarCom;
+  }
+
+  actEscuela() {
+    this._datosFormato.escuela = this.escuela;
+  }
+  actFechaCita() {
+    this._datosFormato.fechaCita = this.fechaCita;
+  }
+
   actDia() {
     this._datosFormato.dia = this.dia;
   }

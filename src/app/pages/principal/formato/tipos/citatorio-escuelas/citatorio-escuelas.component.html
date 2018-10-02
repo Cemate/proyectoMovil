@@ -1,3 +1,24 @@
-<p>
-  citatorio-escuelas works!
-</p>
+<div>
+  <div class="row">
+      <app-header-formatos></app-header-formatos>
+  </div>
+<div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+  <p style="margin-bottom: 0.0001pt; text-indent: 35.4pt; text-align: right;"><span style="line-height: 107%;">ASUNTO: <strong>CITATORIO</strong></span></p>
+  <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>
+        
+  <p style="margin-bottom: 0.0001pt; text-indent: 35.4pt; text-align: right;"><span style="line-height: 107%;">BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A {{_datos.dia}} DE {{_datos.mes}} DE {{_datos.anio}}.</span></p>
+  <p><u><span style="line-height: 107%;">C. {{_datos.director | uppercase}} </span></u></p>
+  <p *ngIf="_datos.activarComite" style="margin-bottom: .0001pt;"><u><span style="line-height: 107%;">{{_datos.comite | uppercase}}.</span></u></p>
+  <p style="margin-bottom: .0001pt;"><strong><span style="line-height: 107%;">{{_datos.escuela | uppercase}}.</span></strong></p>
+  <p style="margin-bottom: .0001pt;"><strong><span style="line-height: 107%;">{{_datos.localidad | uppercase}}.</span></strong></p>
+  <p style="margin-bottom: .0001pt;"><span style="line-height: 107%;">P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E</span></p>
+  <p style="margin-bottom: .0001pt;"><span style="line-height: 107%;">&nbsp;</span></p>
+  <p style="text-align: justify; text-indent: 35.4pt;"><span style="font-size: 13.0pt; line-height: 107%; color: #262626;">EL QUE SUSCRIBE C. LIC. GASPAR MELCHOR MONJARAZ JOSE, AGENTE MUNICIPAL CONSTITUCIONAL, DE LA MANERA MAS ATENTA Y RESPETUOSA ME DIRIJO A USTED PARA CITARLO EN LA OFICINA DE LA AGENCIA MUNICIPAL EL DIA <strong>{{_datos.fechaCita | uppercase}}</strong> PARA TRATAR ASUNTOS RELACIONADO CON LA EDUCACI&Oacute;N.</span></p>
+  <p style="text-align: justify; text-indent: 35.4pt;"><span style="font-size: 13.0pt; line-height: 107%; color: #262626;">&nbsp;NO DUDANDO DE SU AMABLE PRESENCIA AL PRESENTE, LE REITERAMOS NUESTROS MAS SINCEROS AGRADECIMIENTOS.</span></p>
+  <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>
+  <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>
+  <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>
+  
+  <app-footer-formatos></app-footer-formatos>
+</div>
+</div>

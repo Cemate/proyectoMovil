@@ -1,3 +1,4 @@
+import { DatosService } from './../../../../../services/datos.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CitatorioEscuelasComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _datos: DatosService) { }
 
   ngOnInit() {
   }
