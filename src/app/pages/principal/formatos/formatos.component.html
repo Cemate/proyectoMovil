@@ -2,6 +2,7 @@
   <div *ngFor="let formato of formatos | formato: this._formato.busqueda; let i = index" 
       class="col-xs-6 col-sm-4 col-md-3" 
       (click)="escogerFormato(formato.id)"
+      style=""
       >
     <div class="thumbnail search-thumbnail animated fadeIn ">
       

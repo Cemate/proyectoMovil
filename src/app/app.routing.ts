@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PrincipalComponent } from './pages/principal/principal.component';
 import { FormatoComponent } from './pages/principal/formato/formato.component';
 import { NombramientoComponent } from './pages/principal/formato/tipos/nombramiento/nombramiento.component';
+import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/constancia-posesion/constancia-posesion.component';
 
 const app_routes: Routes = [
     // { path: 'formatos', component: PrincipalComponent},
@@ -17,6 +18,7 @@ const app_routes: Routes = [
             { path: '2', component: LiberacionServicioComponent},
             { path: '3', component: NombramientoComponent},
             { path: '4', component: CitatorioEscuelasComponent},
+            { path: '5', component: ConstanciaPosesionComponent},
         ] }
     ]},
     // { path: 'formato/:id', component: FormatoComponent},

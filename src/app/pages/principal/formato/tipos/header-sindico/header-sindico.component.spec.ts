@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderFormatosComponent } from './header-formatos.component';
+import { HeaderSindicoComponent } from './header-sindico.component';
 
-describe('HeaderFormatosComponent', () => {
-  let component: HeaderFormatosComponent;
-  let fixture: ComponentFixture<HeaderFormatosComponent>;
+describe('HeaderSindicoComponent', () => {
+  let component: HeaderSindicoComponent;
+  let fixture: ComponentFixture<HeaderSindicoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderFormatosComponent ]
+      declarations: [ HeaderSindicoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderFormatosComponent);
+    fixture = TestBed.createComponent(HeaderSindicoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

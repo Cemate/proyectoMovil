@@ -18,7 +18,7 @@ export class FormatoService {
     },
     {
       id: 2,
-      nombre: 'C. de Liberación de servicio',
+      nombre: 'Liberación de servicio',
       imagen: 'liberacion'
     },
     {
@@ -29,6 +29,11 @@ export class FormatoService {
     {
       id: 4,
       nombre: 'Citatorio Escuela',
+      imagen: 'nombramiento'
+    },
+    {
+      id: 5,
+      nombre: 'Constancia poseción',
       imagen: 'nombramiento'
     }
   ];

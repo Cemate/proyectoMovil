@@ -51,7 +51,8 @@
           </div>
       </div>
 
-      <div class="form-group" *ngIf="_formato.id == 1">
+      <!-- Origen y vecindad - Posecion -->
+      <div class="form-group" *ngIf="_formato.id == 1 || _formato.id === 5">
           <label for="edad">Edad </label>
 
           <div>
@@ -66,7 +67,7 @@
           </div>
       </div>
 
-
+      <!-- Nombramiento y liberación  -->
       <div *ngIf="_formato.id === 3 || _formato.id === 2">
 
       <div class="form-group">
@@ -84,7 +85,6 @@
           </div>
       </div>
       
-      <!-- Nombramiento -->
       <div class="form-group">
           <label for="nombramiento" class=" sepElemForm"> Nombramiento </label>
             <div>
@@ -166,7 +166,6 @@
         </div>
       </div>
       
-      <!-- Nombrado -->
       <div class="form-group">
         <label for="nombrado" class="sepElemForm"> Nombrado </label>
           <div>
@@ -183,6 +182,7 @@
       
     </div>
 
+    <!-- Citatorio escuela -->
     <div *ngIf="_formato.id == 4">
       
         <div class="form-group">
@@ -201,7 +201,6 @@
             </div>
         </div>
       
-      <!-- Comite -->
       <div class="form-group" *ngIf="activarCom">
         <label for="comite" class="sepElemForm"> Comite </label>
           <div>
@@ -230,7 +229,6 @@
           </div>
       </div>
       
-      <!-- Escuela -->
       <div class="form-group">
         <label for="escuela" class="sepElemForm"> Escuela </label>
           <div>
@@ -260,7 +258,6 @@
             </div>
         </div>
       
-      <!-- Fecha de cita -->
       <div class="form-group">
           <label for="fechaCita" class="sepElemForm"> Fecha de cita </label>
             <div>
@@ -276,7 +273,140 @@
         </div>
     </div>
 
+    <div *ngIf = "_formato.id === 5">
+      <div class="form-group">  
+        <label for="ocupacion"> Ocupación </label>
 
+        <div>
+          <input style="text-transform:uppercase;"
+                  type="text" 
+                  id="ocupacion"
+                  name="ocupacion"
+                  [(ngModel)]="ocupacion"
+                  placeholder="Ocupación" 
+                  class="col-xs-10 col-sm-12"
+                  (keyup)="actOcupacion();"
+                  />
+        </div>
+      </div>
+      <div class="form-group">  
+        <label for="localidad"> Localidad </label>
+
+        <div>
+          <input style="text-transform:uppercase;"
+                  type="text" 
+                  name="localidad"
+                  [(ngModel)]="localidad"
+                  placeholder="Localidad" 
+                  class="col-xs-10 col-sm-12"
+                  (keyup)="actLocalidad();"
+                  />
+        </div>
+      </div>
+      
+      <div class="form-group">  
+        <label for="vendedor"> Vendido por </label>
+
+        <div>
+          <input style="text-transform:uppercase;"
+                  type="text" 
+                  name="vendedor"
+                  [(ngModel)]="vendedor"
+                  placeholder="vendedor" 
+                  class="col-xs-10 col-sm-12"
+                  (keyup)="actVendedor()"
+                  />
+        </div>
+      </div>
+
+      
+      <div class="form-group" style="margin-top: 6px;">
+          <label class="">Sexo vendedor</label>
+
+          <div class="radio" style="margin-top: -3px">
+            <label 
+            (click)="actSexoVendedor('hombre')">
+              <input name="sexoVendedor" 
+                      type="radio" 
+                      class="ace" 
+                      checked="checked" 
+                      value="hombre"/>
+              <span class="lbl">Hombre</span>
+            </label>
+            <label 
+            (click)="actSexoVendedor('mujer')">
+              <input name="sexoVendedor" 
+                    type="radio" 
+                    class="ace"
+                    value="mujer" />
+              <span class="lbl">Mujer</span>
+            </label>
+          </div>
+      </div>
+        
+      <div class="form-group">  
+        <label for="ublicacion"> Ubicación </label>
+
+        <div>
+          <input style="text-transform:uppercase;"
+                  type="text" 
+                  name="ublicacion"
+                  [(ngModel)]="ubicacion"
+                  placeholder="ublicacion" 
+                  class="col-xs-10 col-sm-12"
+                  (keyup)="actUblicacion()"
+                  />
+        </div>
+      </div>
+        
+      <div class="form-group">  
+        <label for="medidas"> Medidas y colindancias </label>
+
+        <div>
+          <input style="text-transform:uppercase;"
+                  type="text" 
+                  name="norte"
+                  [(ngModel)]="norte"
+                  placeholder="norte" 
+                  class="col-xs-10 col-sm-12"
+                  (keyup)="actNorte()"
+                  />
+        </div>
+        <div>
+            <input style="text-transform:uppercase;"
+                    type="text" 
+                    name="sur"
+                    [(ngModel)]="sur"
+                    placeholder="sur" 
+                    class="col-xs-10 col-sm-12"
+                    (keyup)="actSur()"
+                    />
+          </div>
+          <div>
+              <input style="text-transform:uppercase;"
+                      type="text" 
+                      name="oriente"
+                      [(ngModel)]="oriente"
+                      placeholder="oriente" 
+                      class="col-xs-10 col-sm-12"
+                      (keyup)="actOriente()"
+                      />
+            </div>
+            <div>
+                <input style="text-transform:uppercase;"
+                        type="text" 
+                        name="poniente"
+                        [(ngModel)]="poniente"
+                        placeholder="poniente" 
+                        class="col-xs-10 col-sm-12"
+                        (keyup)="actPoniente()"
+                        />
+              </div>
+      </div>
+    </div>
+
+
+    <!-- Fecha de expedición - Todos -->
       <div class="form-group">
           <label for="fecha"  class="sepElemForm">Fecha de expedición</label>
         <div class="row">

@@ -21,6 +21,8 @@ import { LiberacionServicioComponent } from './pages/principal/formato/tipos/lib
 import { HeaderFormatosComponent } from './pages/principal/formato/tipos/header-formatos/header-formatos.component';
 import { FooterFormatosComponent } from './pages/principal/formato/tipos/footer-formatos/footer-formatos.component';
 import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/citatorio-escuelas/citatorio-escuelas.component';
+import { HeaderSindicoComponent } from './pages/principal/formato/tipos/header-sindico/header-sindico.component';
+import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/constancia-posesion/constancia-posesion.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/cita
     HeaderFormatosComponent,
     FooterFormatosComponent,
     CitatorioEscuelasComponent,
+    HeaderSindicoComponent,
+    ConstanciaPosesionComponent,
   ],
   imports: [
     FormsModule,

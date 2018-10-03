@@ -9,6 +9,14 @@ export class DatosService {
   escuela = 'ESC. PRIMARIA';
   fechaCita = 'MARTES 16 DE OCTUBRE DEL PRESENTE AÑO A LAS 4:00 DE LA TARDE';
   activarComite: any;
+  ocupacion = 'CAMPESINO';
+  vendedor: string;
+  ubicacion = 'LA RANCHERIA EL CUAPINOL';
+  norte = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+  sur = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+  oriente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+  poniente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+  sexoVendedor = 'hombre';
 
   constructor() {
   }

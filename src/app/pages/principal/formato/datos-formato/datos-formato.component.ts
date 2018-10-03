@@ -23,6 +23,17 @@ export class DatosFormatoComponent implements OnInit {
   escuela: 'ESC. PRIMARIA';
   fechaCita: string;
 
+  // datos poseción
+  ocupacion: string;
+  vendedor: string;
+  sexoVendedor: string;
+  ubicacion: string;
+  norte: string;
+  sur: string;
+  oriente: string;
+  poniente: string;
+
+
   dia = 1;
   mes = 'OCTUBRE';
   anio = '2018';
@@ -31,6 +42,10 @@ export class DatosFormatoComponent implements OnInit {
 
   constructor(public _datosFormato: DatosService,
     public _formato: FormatoService) {
+      this.norte = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+      this.sur = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+      this.oriente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
+      this.poniente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
   }
 
   ngOnInit() {
@@ -42,6 +57,11 @@ export class DatosFormatoComponent implements OnInit {
   actSexo(sexo: string) {
     this._datosFormato.sexo = sexo;
   }
+
+  actSexoVendedor(sexo: string) {
+    this._datosFormato.sexoVendedor = sexo;
+  }
+
   actEdad() {
     this._datosFormato.edad = this.edad;
   }
@@ -77,6 +97,39 @@ export class DatosFormatoComponent implements OnInit {
     this._datosFormato.fechaCita = this.fechaCita;
   }
 
+  // Funciones de ocupacion
+  actOcupacion() {
+    this._datosFormato.ocupacion = this.ocupacion;
+  }
+
+  actVendedor() {
+    this._datosFormato.vendedor = this.vendedor;
+  }
+
+  actUblicacion() {
+    this._datosFormato.ubicacion = this.ubicacion;
+  }
+  
+  actNorte() {
+    this._datosFormato.norte = this.norte;
+  }
+  
+  actSur() {
+    this._datosFormato.sur = this.sur;
+  }
+  
+  actOriente() {
+    this._datosFormato.oriente = this.oriente;
+  }
+
+  actPoniente() {
+    this._datosFormato.poniente = this.poniente;
+  }
+
+
+
+
+
   actDia() {
     this._datosFormato.dia = this.dia;
   }
@@ -86,6 +139,9 @@ export class DatosFormatoComponent implements OnInit {
   actAnio() {
     this._datosFormato.anio = this.anio;
   }
+
+
+
 
   onPrint() {
     window.print();
