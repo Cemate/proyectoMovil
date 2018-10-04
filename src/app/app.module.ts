@@ -26,6 +26,7 @@ import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/con
 import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ingresos-economicos/ingresos-economicos.component';
 import { AntecedentesNoPenalesComponent } from './pages/principal/formato/tipos/antecedentes-no-penales/antecedentes-no-penales.component';
 import { FooterSindicoComponent } from './pages/principal/formato/tipos/footer-sindico/footer-sindico.component';
+import { DomicilioComponent } from './pages/principal/formato/tipos/domicilio/domicilio.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FooterSindicoComponent } from './pages/principal/formato/tipos/footer-s
     IngresosEconomicosComponent,
     AntecedentesNoPenalesComponent,
     FooterSindicoComponent,
+    DomicilioComponent,
   ],
   imports: [
     FormsModule,

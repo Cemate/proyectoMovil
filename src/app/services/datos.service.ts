@@ -25,6 +25,9 @@ export class DatosService {
   descripcionIngreso: string;
 
   sexoTutor = 'hombre';
+  vecinoDe = 'ESTA POBLACION DE BUENAVISTA LOXICHA';
+  padre: string;
+  madre: string;
 
   constructor() {
   }

@@ -40,6 +40,11 @@ export class DatosFormatoComponent implements OnInit {
   ingresoTutor: string;
   descripcionIngreso: string;
   sexoTutor;
+  
+  // datos C. de Domicilio
+  vecinoDe: 'ESTA POBLACION DE BUENAVISTA LOXICHA';
+  padre: string;
+  madre: string;
 
   dia = 1;
   mes = 'OCTUBRE';
@@ -158,6 +163,16 @@ export class DatosFormatoComponent implements OnInit {
   }
   actSexoTutor(sexo: string) {
     this._datosFormato.sexoTutor = this.sexoTutor;
+  }
+
+  actVecinoDe() {
+    this._datosFormato.vecinoDe = this.vecinoDe;
+  }
+  actPadre() {
+    this._datosFormato.padre = this.padre;
+  }
+  actMadre() {
+    this._datosFormato.madre = this.madre;
   }
 
 

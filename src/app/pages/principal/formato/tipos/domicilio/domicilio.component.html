@@ -1,0 +1,27 @@
+<div>
+    <div class="row">
+        <app-header-formatos></app-header-formatos>
+    </div>
+  <div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+      <p style="text-align: right;"><span style="color: #262626;"><strong>ASUNTO:</strong> CONSTANCIA DE DOMICILIO.</span></p>
+      <p><strong><span style="color: #262626;">A QUIEN CORRESPONDA:</span></strong><strong><span style="color: #262626;">&nbsp;</span></strong></p>
+      <p style="text-align: justify;"><span style="color: #262626;">&nbsp; &nbsp; EL QUE SUSCRIBE <strong>C. {{_datos.agente | uppercase}}</strong>, AGENTE MUNICIPAL CONSTITUCIONAL DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES QUE LA LEY ORGANICA MUNICIPAL ME OTORGA.</span></p>
+      <p style="text-align: justify;">&nbsp;</p>
+      <p style="text-align: center;"><strong><span style="color: #262626;">HAGO CONSTAR</span></strong><span style="color: #262626;">&nbsp;</span></p>
+      <p style="text-align: center;">&nbsp;</p>
+
+      <p *ngIf="_datos.sexo == 'hombre'; else elseBlock" style="text-align: justify;"><span style="color: #262626;">QUE EL C. <strong>{{_datos.nombre | uppercase}}, </strong>DE {{_datos.edad }} AÑOS DE EDAD, QUIEN ES VECINO DE {{_datos.vecinoDe | uppercase}} PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA, SIENDO&nbsp; SUS PADRES EL SEÑOR: <strong>{{_datos.padre | uppercase}}</strong> <strong>&nbsp;</strong>Y LA SEÑORA: <strong>{{_datos.madre | uppercase}}, </strong>DE NACIONALIDAD MEXICANA, CON&nbsp; DOMICILIO BIEN CONOCIDO EN ESTA MISMA POBLACION.&nbsp; </span></p>
+
+      <ng-template #elseBlock>
+          <p style="text-align: justify;"><span style="color: #262626;">QUE LA C. <strong>{{_datos.nombre | uppercase}}, </strong>DE {{_datos.edad | uppercase}} AÑOS DE EDAD, QUIEN ES VECINA DE {{_datos.vecinoDe | uppercase}} PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA, SIENDO&nbsp; SUS PADRES EL SEÑOR: <strong>{{_datos.padre | uppercase}}</strong> <strong>&nbsp;</strong>Y LA SEÑORA: <strong>{{_datos.madre | uppercase}}, </strong>DE NACIONALIDAD MEXICANA, CON&nbsp; DOMICILIO BIEN CONOCIDO EN ESTA MISMA POBLACION.&nbsp; </span></p>
+      </ng-template>
+      
+      <p style="text-align: justify;"><span style="color: #262626;">&nbsp;</span></p>
+
+      <p *ngIf="_datos.sexo == 'hombre'" style="text-align: justify;"><span style="color: #262626;">&nbsp;&nbsp;&nbsp;&nbsp;A PETICION DEL INTERESADO Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXTIENDE LA PRESENTE CONSTANCIA EN LA AGENCIA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A LOS <strong>{{_datos.dia }} </strong>DIAS DEL MES DE <strong>{{_datos.mes | uppercase}} </strong>DEL AÑO <strong>{{_datos.anio | uppercase}}</strong>.</span></p>
+      <p *ngIf="_datos.sexo == 'mujer'" style="text-align: justify;"><span style="color: #262626;">&nbsp;&nbsp;&nbsp;&nbsp;A PETICION DE LA INTERESADA Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXTIENDE LA PRESENTE CONSTANCIA EN LA AGENCIA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A LOS <strong>{{_datos.dia}} </strong>DIAS DEL MES DE <strong>{{_datos.mes | uppercase}} </strong>DEL AÑO <strong>{{_datos.anio | uppercase}}</strong>.</span></p>
+
+    <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>        
+    <app-footer-formatos></app-footer-formatos>
+  </div>
+</div>

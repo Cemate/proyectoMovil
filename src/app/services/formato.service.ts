@@ -46,6 +46,11 @@ export class FormatoService {
       id: 6,
       nombre: 'C. Ants. No Penales',
       imagen: 'nombramiento'
+    },
+    {
+      id: 7,
+      nombre: 'C. Domicilio',
+      imagen: 'nombramiento'
     }
   ];
 
@@ -54,7 +59,7 @@ export class FormatoService {
       id: '',
       nombre: '',
       imagen: ''
-    }
+    };
    }
 
   getFormatos(): Formato[] {

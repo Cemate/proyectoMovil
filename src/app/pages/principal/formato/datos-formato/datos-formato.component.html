@@ -51,8 +51,8 @@
           </div>
       </div>
 
-      <!-- Origen y vecindad - Posecion -->
-      <div class="form-group" *ngIf="idFormato == 0 || idFormato == 4">
+      <!-- Origen y vecindad - Posecion - Domicilio -->
+      <div class="form-group" *ngIf="idFormato == 0 || idFormato == 4 || idFormato == 7">
           <label for="edad">Edad </label>
 
           <div>
@@ -405,7 +405,7 @@
       </div>
     </div>
 
-    <div *ngIf="idFormato === 5">
+    <div *ngIf="idFormato == 5">
       
         <div class="form-group">
           <label for="padre" class="sepElemForm">Nombre tutor </label>
@@ -460,6 +460,51 @@
         </div>
     </div>
 
+    <div *ngIf="idFormato == 7">
+      <div class="form-group">
+        <label for="vecinoDe">Vecino de:</label>
+
+        <div>
+          <input  (keyup)="actVecinoDe()"
+          style="text-transform:uppercase;"
+                  type="text" 
+                  id="vecinoDe"
+                  name="vecinoDe"
+                  [(ngModel)]="vecinoDe"
+                  placeholder="localidad"
+                  class="col-xs-10 col-sm-12" />
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="padre">Padre:</label>
+  
+          <div>
+            <input  (keyup)="actPadre()"
+            style="text-transform:uppercase;"
+                    type="text" 
+                    id="padre"
+                    name="padre"
+                    [(ngModel)]="padre"
+                    placeholder="padre"
+                    class="col-xs-10 col-sm-12" />
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="madre">Madre:</label>
+    
+            <div>
+              <input  (keyup)="actMadre()"
+                      type="text" 
+                      style="text-transform:uppercase;"
+                      id="madre"
+                      name="madre"
+                      [(ngModel)]="madre"
+                      placeholder="madre"
+                      class="col-xs-10 col-sm-12" />
+            </div>
+          </div>
+    </div>
+
 
     <!-- Fecha de expedición - Todos -->
       <div class="form-group">
@@ -468,7 +513,7 @@
             <div class="col-sm-2">
               <input type="text" name="dia" id="dia" [(ngModel)]="dia" (keyup)="actDia()" minlength="1" maxlength="31" size="2">
             </div>
-            <div class="col-sm-6" (click)="actMes()">
+            <div class="col-sm-6" (change)="actMes()">
               <select name="mes" id="mes" [(ngModel)]="mes">
                 <option value="ENERO">ENERO</option>
                 <option value="FEBRERO">FEBRERO</option>
