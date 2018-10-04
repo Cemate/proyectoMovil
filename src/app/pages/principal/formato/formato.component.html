@@ -18,7 +18,21 @@
           </div>
           <div class="row">
             <div class="col-sm-12">
-                <router-outlet></router-outlet>
+                <!-- <router-outlet></router-outlet> -->
+
+                <div [ngSwitch]="id">
+                  <div *ngSwitchCase="0"><app-origen-vecindad></app-origen-vecindad></div>
+                  <div *ngSwitchCase="1"><app-liberacion-servicio></app-liberacion-servicio> </div>
+                  <div *ngSwitchCase="2"><app-nombramiento></app-nombramiento> </div>
+                  <div *ngSwitchCase="3"><app-citatorio-escuelas></app-citatorio-escuelas> </div>
+                  <div *ngSwitchCase="4"><app-constancia-posesion></app-constancia-posesion> </div>
+                  <div *ngSwitchCase="5"><app-ingresos-economicos></app-ingresos-economicos> </div>
+                  <div *ngSwitchCase="6"><app-antecedentes-no-penales></app-antecedentes-no-penales> </div>
+                  <div *ngSwitchDefault>...</div>
+                </div>
+
+
+
             </div>
 
           </div>

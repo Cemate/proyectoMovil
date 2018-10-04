@@ -24,6 +24,8 @@ import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/cita
 import { HeaderSindicoComponent } from './pages/principal/formato/tipos/header-sindico/header-sindico.component';
 import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/constancia-posesion/constancia-posesion.component';
 import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ingresos-economicos/ingresos-economicos.component';
+import { AntecedentesNoPenalesComponent } from './pages/principal/formato/tipos/antecedentes-no-penales/antecedentes-no-penales.component';
+import { FooterSindicoComponent } from './pages/principal/formato/tipos/footer-sindico/footer-sindico.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,8 @@ import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ing
     HeaderSindicoComponent,
     ConstanciaPosesionComponent,
     IngresosEconomicosComponent,
+    AntecedentesNoPenalesComponent,
+    FooterSindicoComponent,
   ],
   imports: [
     FormsModule,

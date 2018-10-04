@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatosService } from '../../../../../services/datos.service';
 
 @Component({
   selector: 'app-footer-formatos',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterFormatosComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _datos: DatosService) { }
 
   ngOnInit() {
   }

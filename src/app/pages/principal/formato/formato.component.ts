@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FormatoComponent implements OnInit {
 
   formato: any = {};
+  public id: number;
 
   constructor( private actRoute: ActivatedRoute,
                private _formato: FormatoService) {
@@ -17,7 +18,8 @@ export class FormatoComponent implements OnInit {
 
   ngOnInit() {
     this.actRoute.params.subscribe( params => {
-      this.formato = this._formato.getFormato();
+      this.formato = this._formato.getFormato(params['id']);
+      this.id = params['id'];
       console.log(this.formato.nombre);
       console.log(params['id']);
      });

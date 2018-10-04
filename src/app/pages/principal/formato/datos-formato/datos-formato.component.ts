@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { FormatoService } from './../../../../services/formato.service';
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from './../../../../services/datos.service';
@@ -46,8 +47,15 @@ export class DatosFormatoComponent implements OnInit {
 
   tamFuente = 12;
 
+  idFormato: any;
   constructor(public _datosFormato: DatosService,
-    public _formato: FormatoService) {
+    private actRoute: ActivatedRoute) {
+
+      this.actRoute.params.subscribe( params => {
+        this.idFormato = params['id'];
+        console.log('hola ' + this.idFormato);
+       });
+
       this.norte = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
       this.sur = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
       this.oriente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';

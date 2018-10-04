@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DatosService {
+  agente = 'LIC. GASPAR MELCHOR MONJARAZ JOSÉ';
+  sindico = 'nombre del sindico';
   director = 'DIRECTOR DE LA ESCUELA';
   comite = 'COMITE DE PADRES DE FAMILIA';
   escuela = 'ESC. PRIMARIA';
@@ -22,7 +24,7 @@ export class DatosService {
   ingresoTutor: string;
   descripcionIngreso: string;
 
-  sexoTutor= 'hombre';
+  sexoTutor = 'hombre';
 
   constructor() {
   }

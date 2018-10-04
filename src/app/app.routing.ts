@@ -1,3 +1,4 @@
+import { AntecedentesNoPenalesComponent } from './pages/principal/formato/tipos/antecedentes-no-penales/antecedentes-no-penales.component';
 import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/citatorio-escuelas/citatorio-escuelas.component';
 import { LiberacionServicioComponent } from './pages/principal/formato/tipos/liberacion-servicio/liberacion-servicio.component';
 import { OrigenVecindadComponent } from './pages/principal/formato/tipos/origen-vecindad/origen-vecindad.component';
@@ -14,13 +15,14 @@ const app_routes: Routes = [
     // { path: 'about', component: AboutComponent},
     { path: 'home', children: [
         { path: '', component: PrincipalComponent},
-        { path: 'formato', component: FormatoComponent, children: [
+        { path: 'formato/:id', component: FormatoComponent, children: [
             { path: '1', component: OrigenVecindadComponent},
             { path: '2', component: LiberacionServicioComponent},
             { path: '3', component: NombramientoComponent},
             { path: '4', component: CitatorioEscuelasComponent},
             { path: '5', component: ConstanciaPosesionComponent},
             { path: '6', component: IngresosEconomicosComponent},
+            { path: '7', component: AntecedentesNoPenalesComponent},
         ] }
     ]},
     // { path: 'formato/:id', component: FormatoComponent},
