@@ -33,6 +33,12 @@ export class DatosFormatoComponent implements OnInit {
   oriente: string;
   poniente: string;
 
+  // datos
+  tutor =  'SU PADRE EL C.';
+  ocupacionTutor: string;
+  ingresoTutor: string;
+  descripcionIngreso: string;
+  sexoTutor;
 
   dia = 1;
   mes = 'OCTUBRE';
@@ -109,21 +115,41 @@ export class DatosFormatoComponent implements OnInit {
   actUblicacion() {
     this._datosFormato.ubicacion = this.ubicacion;
   }
-  
+
   actNorte() {
     this._datosFormato.norte = this.norte;
   }
-  
+
   actSur() {
     this._datosFormato.sur = this.sur;
   }
-  
+
   actOriente() {
     this._datosFormato.oriente = this.oriente;
   }
 
   actPoniente() {
     this._datosFormato.poniente = this.poniente;
+  }
+
+  // funciones ingresos
+  actTutor() {
+    this._datosFormato.tutor = this.tutor;
+  }
+
+  actOcupacionTutor() {
+    this._datosFormato.ocupacionTutor = this.ocupacionTutor;
+  }
+
+  actIngreso() {
+    this._datosFormato.ingresoTutor = this.ingresoTutor;
+  }
+
+  actDescripcionIngreso() {
+    this._datosFormato.descripcionIngreso = this.descripcionIngreso;
+  }
+  actSexoTutor(sexo: string) {
+    this._datosFormato.sexoTutor = this.sexoTutor;
   }
 
 

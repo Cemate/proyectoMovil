@@ -1,0 +1,35 @@
+<div>
+    <div class="row">
+        <app-header-sindico></app-header-sindico>
+    </div>
+  <div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+      <!-- <p style="margin-bottom: 0.0001pt; line-height: normal; text-align: right;"><strong><span style="color: black;">ASUNTO</span></strong><span style="color: black;">: CONSTANCIA DE INGRESOS ECONOMICOS.</span></p> -->
+
+      <p style="margin-bottom: 0.0001pt; line-height: normal; text-align: right;"><strong><span style="color: black;">ASUNTO</span></strong><span style="color: black;">: CONSTANCIA DE INGRESOS</span></p>
+      <p style="margin-bottom: 0.0001pt; line-height: normal; text-align: right;"><span style="color: black;">ECONOMICOS.</span></p>
+    
+      <p style="line-height: normal;"><span style="color: black;">&nbsp;</span></p>
+      <p style="line-height: normal;"><span style="color: black;">AQUIEN CORRESPONDA:</span></p>
+      <p style="line-height: normal;"><span style="color: black;">&nbsp;</span></p>
+      <p style="line-height: normal; text-align: justify;"><span style="color: black;">&nbsp; &nbsp; &nbsp; &nbsp;EL QUE SUSCRIBE <strong>C. nombre del sindico</strong>, SINDICO AUXILIAR MUNICIPAL&nbsp; DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES&nbsp; QUE LA LEY ORGANICA MUNICIPAL ME&nbsp; CONFIERE TENGO A BIEN EXTENDER LA PRESENTE:</span></p>
+      <p style="margin-bottom: .0001pt; line-height: normal;"><span style="color: black;">&nbsp;</span></p>
+      <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><strong><span style="color: black;">CONSTANCIA DE INGRESOS</span></strong></p>
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><strong><span style="color: black;">&nbsp;</span></strong><strong><span style="color: black;">&nbsp;</span></strong></p>
+      
+      <p *ngIf="_datos.sexo === 'hombre'"  style="margin-bottom: .0001pt; line-height: normal; text-align: justify;"><span style="color: black;">QUE EL {{_datos.nombre | uppercase}} ES UN JOVEN DE BAJOS RECURSOS ECONOMICOS, DEPENDE ECONOMICAMENTE DE {{_datos.tutor | uppercase}}, DE OCUPACION {{_datos.ocupacionTutor | uppercase}} CON UN INGRESO MENSUAL DE $ {{_datos.ingresoTutor }}.00 ({{_datos.descripcionIngreso | uppercase}} M/N) EL CUAL POSIBILITA EL SUSTENTO ECONOMICO DE LA FAMILIA Y RADICA EN LA COMUNIDAD DE BUENAVISTA, SAN AGUSTIN LOXICHA, POCHUTLA, OAXACA.</span></p>
+      <p *ngIf="_datos.sexo === 'mujer'" style="margin-bottom: .0001pt; line-height: normal;  text-align: justify;"><span style="color: black;">QUE LA {{_datos.nombre | uppercase}} ES UNA JOVEN DE BAJOS RECURSOS ECONOMICOS, DEPENDE ECONOMICAMENTE DE {{_datos.tutor | uppercase}}, DE OCUPACION {{_datos.ocupacionTutor | uppercase}} CON UN INGRESO MENSUAL DE $ {{_datos.ingresoTutor }}.00 ({{_datos.descripcionIngreso | uppercase}} M/N) EL CUAL POSIBILITA EL SUSTENTO ECONOMICO DE LA FAMILIA Y RADICA EN LA COMUNIDAD DE BUENAVISTA, SAN AGUSTIN LOXICHA, POCHUTLA, OAXACA.</span></p>
+      
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      
+
+      <p *ngIf="_datos.sexo == 'hombre'" style="margin-bottom: 0.0001pt; line-height: normal; text-align: justify;"><span style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp; A PETICION DEL INTERESADO Y PARA LOS FINES LEGALES QUE LE CONVENGAN, SE EXTIENDE LA PRESENTE CONSTANCIA DE INGRESOS &nbsp;EN LA SINDICATURA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A LOS <strong>{{_datos.dia}}</strong> DIAS DEL MES DE <strong>{{_datos.mes}}</strong> DEL A&Ntilde;O <strong>{{_datos.anio}}</strong>.</span></p>
+      <p *ngIf="_datos.sexo == 'mujer'" style="margin-bottom: 0.0001pt; line-height: normal; text-align: justify;"><span style="color: black;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A PETICION DE LA INTERESADA Y PARA LOS FINES LEGALES QUE LA CONVENGAN, SE EXTIENDE LA PRESENTE CONSTANCIA DE INGRESOS &nbsp;EN LA SINDICATURA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A LOS <strong>{{_datos.dia}}</strong> DIAS DEL MES DE <strong>{{_datos.mes}}</strong> DEL A&Ntilde;O <strong>{{_datos.anio}}</strong>.</span></p>
+      
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      
+    <app-footer-formatos></app-footer-formatos>
+  </div>
+</div>

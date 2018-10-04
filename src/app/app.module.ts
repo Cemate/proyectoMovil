@@ -23,6 +23,7 @@ import { FooterFormatosComponent } from './pages/principal/formato/tipos/footer-
 import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/citatorio-escuelas/citatorio-escuelas.component';
 import { HeaderSindicoComponent } from './pages/principal/formato/tipos/header-sindico/header-sindico.component';
 import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/constancia-posesion/constancia-posesion.component';
+import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ingresos-economicos/ingresos-economicos.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/con
     CitatorioEscuelasComponent,
     HeaderSindicoComponent,
     ConstanciaPosesionComponent,
+    IngresosEconomicosComponent,
   ],
   imports: [
     FormsModule,

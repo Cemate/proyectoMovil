@@ -17,6 +17,12 @@ export class DatosService {
   oriente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
   poniente = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
   sexoVendedor = 'hombre';
+  tutor = 'SU PADRE EL C.';
+  ocupacionTutor: string;
+  ingresoTutor: string;
+  descripcionIngreso: string;
+
+  sexoTutor= 'hombre';
 
   constructor() {
   }

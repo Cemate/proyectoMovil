@@ -35,6 +35,11 @@ export class FormatoService {
       id: 5,
       nombre: 'Constancia poseción',
       imagen: 'nombramiento'
+    },
+    {
+      id: 6,
+      nombre: 'Ingresos económicos',
+      imagen: 'nombramiento'
     }
   ];
 

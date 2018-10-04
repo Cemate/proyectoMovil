@@ -259,18 +259,18 @@
         </div>
       
       <div class="form-group">
-          <label for="fechaCita" class="sepElemForm"> Fecha de cita </label>
-            <div>
-              <input
-                      type="text" style="text-transform:uppercase;"
-                      id="fechaCita" 
-                      placeholder="Fecha de cita"
-                      class="col-xs-10 col-sm-12" 
-                      name="fechaCita"
-                      [(ngModel)]="fechaCita"
-                      (keyup)="actFechaCita()"/>
-            </div>
-        </div>
+        <label for="fechaCita" class="sepElemForm"> Fecha de cita </label>
+          <div>
+            <input
+                    type="text" style="text-transform:uppercase;"
+                    id="fechaCita" 
+                    placeholder="Fecha de cita"
+                    class="col-xs-10 col-sm-12" 
+                    name="fechaCita"
+                    [(ngModel)]="fechaCita"
+                    (keyup)="actFechaCita()"/>
+          </div>
+      </div>
     </div>
 
     <div *ngIf = "_formato.id === 5">
@@ -403,6 +403,61 @@
                         />
               </div>
       </div>
+    </div>
+
+    <div *ngIf="_formato.id === 6">
+      
+        <div class="form-group">
+          <label for="padre" class="sepElemForm">Nombre tutor </label>
+            <div>
+              <input
+                      type="text" style="text-transform:uppercase;"
+                      id="tutor" 
+                      placeholder="Nombre de tutor"
+                      class="col-xs-10 col-sm-12" 
+                      name="tutor"
+                      [(ngModel)]="tutor"
+                      (keyup)="actTutor()"/>
+            </div>
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="ocupacionPadre" class="sepElemForm">Ocupación padre </label>
+            <div>
+              <input
+                      type="text" style="text-transform:uppercase;"
+                      id="ocupacionTutor" 
+                      placeholder="Ocupación de Tutor"
+                      class="col-xs-10 col-sm-12" 
+                      name="ocupacionTutor"
+                      [(ngModel)]="ocupacionTutor"
+                      (keyup)="actOcupacionTutor()"/>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="ingresoPadre" class="sepElemForm">Ingreso tutor </label>
+            <div>
+              <input
+                      type="text" style="text-transform:uppercase;"
+                      id="ingresoTutor" 
+                      placeholder="1,000"
+                      class="col-xs-10 col-sm-12" 
+                      name="ingresoTutor"
+                      [(ngModel)]="ingresoTutor"
+                      (keyup)="actIngreso()"/>
+            </div>
+            <div>
+                <input
+                        type="text" style="text-transform:uppercase;"
+                        id="descripcionIngreso" 
+                        placeholder="MIL PESOS"
+                        class="col-xs-10 col-sm-12" 
+                        name="descripcionIngreso"
+                        [(ngModel)]="descripcionIngreso"
+                        (keyup)="actDescripcionIngreso()"/>
+              </div>
+        </div>
     </div>
 
 

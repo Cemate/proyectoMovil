@@ -19,6 +19,7 @@ export class FormatoComponent implements OnInit {
     this.actRoute.params.subscribe( params => {
       this.formato = this._formato.getFormato();
       console.log(this.formato.nombre);
+      console.log(params['id']);
      });
     }
 }
