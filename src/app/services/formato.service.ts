@@ -51,6 +51,11 @@ export class FormatoService {
       id: 7,
       nombre: 'C. Domicilio',
       imagen: 'nombramiento'
+    },
+    {
+      id: 8,
+      nombre: 'C. de Defunción',
+      imagen: 'nombramiento'
     }
   ];
 

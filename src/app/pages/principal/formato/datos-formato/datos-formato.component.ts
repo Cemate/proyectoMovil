@@ -40,11 +40,18 @@ export class DatosFormatoComponent implements OnInit {
   ingresoTutor: string;
   descripcionIngreso: string;
   sexoTutor;
-  
+
   // datos C. de Domicilio
   vecinoDe: 'ESTA POBLACION DE BUENAVISTA LOXICHA';
   padre: string;
   madre: string;
+
+  // C. de Defunción
+  horaDeceso: any;
+  diaDeceso = 1;
+  mesDeceso = 'OCTUBRE';
+  anioDeceso = '2018';
+  consecuencia = 1;
 
   dia = 1;
   mes = 'OCTUBRE';
@@ -53,6 +60,7 @@ export class DatosFormatoComponent implements OnInit {
   tamFuente = 12;
 
   idFormato: any;
+
   constructor(public _datosFormato: DatosService,
     private actRoute: ActivatedRoute) {
 
@@ -174,8 +182,23 @@ export class DatosFormatoComponent implements OnInit {
   actMadre() {
     this._datosFormato.madre = this.madre;
   }
+  actConsecuencia() {
+    this._datosFormato.consecuencia = this.consecuencia;
+  }
 
-
+// Funciones C. de Defunción
+actHoraDeceso() {
+  this._datosFormato.horaDeceso = this.horaDeceso;
+}
+actDiaDeceso() {
+    this._datosFormato.diaDeceso = this.diaDeceso;
+  }
+  actMesDeceso() {
+    this._datosFormato.mesDeceso = this.mesDeceso;
+  }
+  actAnioDeceso() {
+    this._datosFormato.anioDeceso = this.anioDeceso;
+  }
 
 
 

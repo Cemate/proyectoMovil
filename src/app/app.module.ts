@@ -27,6 +27,7 @@ import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ing
 import { AntecedentesNoPenalesComponent } from './pages/principal/formato/tipos/antecedentes-no-penales/antecedentes-no-penales.component';
 import { FooterSindicoComponent } from './pages/principal/formato/tipos/footer-sindico/footer-sindico.component';
 import { DomicilioComponent } from './pages/principal/formato/tipos/domicilio/domicilio.component';
+import { DefuncionComponent } from './pages/principal/formato/tipos/defuncion/defuncion.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { DomicilioComponent } from './pages/principal/formato/tipos/domicilio/do
     AntecedentesNoPenalesComponent,
     FooterSindicoComponent,
     DomicilioComponent,
+    DefuncionComponent,
   ],
   imports: [
     FormsModule,

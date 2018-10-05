@@ -28,6 +28,11 @@ export class DatosService {
   vecinoDe = 'ESTA POBLACION DE BUENAVISTA LOXICHA';
   padre: string;
   madre: string;
+  diaDeceso: number;
+  mesDeceso: string;
+  anioDeceso: string;
+  horaDeceso: any;
+  consecuencia: any;
 
   constructor() {
   }

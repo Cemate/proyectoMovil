@@ -7,9 +7,8 @@
   <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>
         
   <p style="margin-bottom: 0.0001pt; text-indent: 35.4pt; text-align: right;"><span style="line-height: 107%;">BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A {{_datos.dia}} DE {{_datos.mes}} DE {{_datos.anio}}.</span></p>
-  <p><u><span style="line-height: 107%;">C. {{_datos.director | uppercase}} </span></u></p>
-  <p *ngIf="_datos.activarComite" style="margin-bottom: .0001pt;"><u><span style="line-height: 107%;">{{_datos.comite | uppercase}}.</span></u></p>
-  <p style="margin-bottom: .0001pt;"><strong><span style="line-height: 107%;">{{_datos.escuela | uppercase}}.</span></strong></p>
+  <p><u><span style="line-height: 107%;">C. {{_datos.director | uppercase}} </span></u> <br> <u *ngIf="_datos.activarComite"><span style="line-height: 107%;">{{_datos.comite | uppercase}}.</span></u></p>
+  <p style="margin-bottom: .0001pt; margin-top: -8px"><strong><span style="line-height: 107%;">{{_datos.escuela | uppercase}}.</span></strong></p>
   <p style="margin-bottom: .0001pt;"><strong><span style="line-height: 107%;">{{_datos.localidad | uppercase}}.</span></strong></p>
   <p style="margin-bottom: .0001pt;"><span style="line-height: 107%;">P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E</span></p>
   <p style="margin-bottom: .0001pt;"><span style="line-height: 107%;">&nbsp;</span></p>

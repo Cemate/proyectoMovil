@@ -1,0 +1,45 @@
+<div>
+    <div class="row">
+        <app-header-sindico></app-header-sindico>
+    </div>
+  <div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+      <p style="margin-bottom: 0.0001pt; line-height: normal; text-align: right;"><strong>ASUNTO</strong>: CONSTANCIA DE DEFUNCION.</p>
+      <p style="line-height: normal;">&nbsp;</p>
+      <p style="line-height: normal;">AQUIEN CORRESPONDA:</p>
+      <p style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">&nbsp;&nbsp;&nbsp; EL QUE SUSCIBE <strong>C. {{_datos.sindico | uppercase}}</strong>, SINDICO AUXILIAR MUNICIPAL DE ESTA POBLACION, EN FUNCIONES LEGALES Y EN USO DE LAS FACULTADES&nbsp; QUE LA LEY ORGANICA MUNICIPAL ME OTORGA:</p>
+      <p style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">&nbsp;</p>
+      <p style="margin-bottom: .0001pt; text-align: center; line-height: normal;"><strong>HAGO CONSTAR</strong></p>
+      <p style="margin-bottom: .0001pt; line-height: normal;"><strong>&nbsp;</strong></p>
+
+      <p *ngIf="_datos.sexo == 'hombre'; else elseBlock" style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">
+        EL FALLECIMIENTO DE QUIEN EN VIDA LLEVO EL NOMBRE DE: <strong>{{_datos.nombre | uppercase}}</strong>, SEXO MASCULINO, DE {{_datos.edad}} AÑOS DE EDAD, ORIGINARIO Y VECINO DE {{_datos.vecinoDe | uppercase }}, PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA , DISTRITO DE POCHUTLA, ESTADO DE OAXACA.
+      </p>
+      <ng-template #elseBlock>
+          <p style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">
+              EL FALLECIMIENTO DE QUIEN EN VIDA LLEVO EL NOMBRE DE: <strong>{{_datos.nombre | uppercase}}</strong>, SEXO FEMENINO, DE {{_datos.edad}} AÑOS DE EDAD, ORIGINARIA Y VECINA DE {{_datos.vecinoDe | uppercase }}, PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA , DISTRITO DE POCHUTLA, ESTADO DE OAXACA.
+            </p>
+      </ng-template>
+
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      <p style="margin-bottom: .0001pt; line-height: normal;">FALLECIO A LAS {{_datos.horaDeceso}} HORAS DEL DIA {{_datos.diaDeceso | uppercase}} DE {{_datos.mesDeceso | uppercase}} DEL {{_datos.anioDeceso}}.</p>
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      <p style="margin-bottom: .0001pt; line-height: normal;"><strong>A CONSECUENCIA DE:</strong></p>
+      <p style="margin-bottom: .0001pt; line-height: normal;">&nbsp;</p>
+      
+      <textarea class="form-control areaConsecuencia"
+                id="form-field-8" rows="{{_datos.consecuencia}}"
+                placeholder="Agregar consecuencias"
+                style="text-transform:uppercase;"
+                [ngStyle]="{'font-family': _datos.fuente}"></textarea>
+      
+        
+      
+      <p style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">&nbsp;</p>
+      
+
+      <p style="margin-bottom: .0001pt; text-align: justify; line-height: normal;">&nbsp;&nbsp;&nbsp; PARA LOS FINES LEGALES Y ADMINISTRATIVOS QUE HAYA LUGAR, SE EXTIENDE LA PRESENTE CONSTANCIA EN LA SINDICATURA MUNICIPAL DE BUENAVISTA LOXICHA, POCHUTLA, OAXACA; A LOS {{_datos.dia}} DIAS DEL MES DE <strong>{{_datos.mes}}</strong> DEL AÑO <strong>{{_datos.anio}}</strong>.</p>
+      
+      <p style="margin-bottom: .0001pt; text-align: center; text-indent: 35.4pt; line-height: normal;"><span style="color: #262626;">&nbsp;</span></p>        
+    <app-footer-sindico></app-footer-sindico>
+  </div>
+</div>

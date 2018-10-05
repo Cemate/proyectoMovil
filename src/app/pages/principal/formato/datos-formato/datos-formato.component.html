@@ -52,7 +52,7 @@
       </div>
 
       <!-- Origen y vecindad - Posecion - Domicilio -->
-      <div class="form-group" *ngIf="idFormato == 0 || idFormato == 4 || idFormato == 7">
+      <div class="form-group" *ngIf="idFormato == 0 || idFormato == 4 || idFormato == 7 || idFormato == 8 ">
           <label for="edad">Edad </label>
 
           <div>
@@ -460,21 +460,24 @@
         </div>
     </div>
 
-    <div *ngIf="idFormato == 7">
-      <div class="form-group">
-        <label for="vecinoDe">Vecino de:</label>
-
-        <div>
-          <input  (keyup)="actVecinoDe()"
-          style="text-transform:uppercase;"
-                  type="text" 
-                  id="vecinoDe"
-                  name="vecinoDe"
-                  [(ngModel)]="vecinoDe"
-                  placeholder="localidad"
-                  class="col-xs-10 col-sm-12" />
+    <div *ngIf="idFormato == 7 || idFormato == 8 ">
+        <div class="form-group">
+          <label for="vecinoDe">Vecino de:</label>
+  
+          <div>
+            <input  (keyup)="actVecinoDe()"
+            style="text-transform:uppercase;"
+                    type="text" 
+                    id="vecinoDe"
+                    name="vecinoDe"
+                    [(ngModel)]="vecinoDe"
+                    placeholder="localidad"
+                    class="col-xs-10 col-sm-12" />
+          </div>
         </div>
-      </div>
+    </div>
+
+    <div *ngIf="idFormato == 7">
       <div class="form-group">
           <label for="padre">Padre:</label>
   
@@ -503,6 +506,58 @@
                       class="col-xs-10 col-sm-12" />
             </div>
           </div>
+    </div>
+    
+    <div *ngIf = "idFormato == 8">
+      <div class="form-group">
+          <label for="horaDeceso">Hora de deceso:</label>
+  
+          <div>
+            <input  (keyup)="actHoraDeceso()"
+                    type="text"
+                    id="horaDeceso"
+                    name="horaDeceso"
+                    [(ngModel)]="horaDeceso"
+                    placeholder="00:00 - 24:00"
+                    class="col-xs-10 col-sm-12"/>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="fecha"  class="sepElemForm">Fecha de deceso</label>
+          <div class="row">
+              <div class="col-sm-2">
+                <input type="text" name="diaDeceso" id="diaDeceso" [(ngModel)]="diaDeceso" (keyup)="actDiaDeceso()" minlength="1" maxlength="31" size="2">
+              </div>
+              <div class="col-sm-6" (change)="actMesDeceso()">
+                <select name="mesDeceso" id="mesDeceso" [(ngModel)]="mesDeceso">
+                  <option value="ENERO">ENERO</option>
+                  <option value="FEBRERO">FEBRERO</option>
+                  <option value="MARZO">MARZO</option>
+                  <option value="ABRIL">ABRIL</option>
+                  <option value="MAYO">MAYO</option>
+                  <option value="JUNIO">JUNIO</option>
+                  <option value="JULIO">JULIO</option>
+                  <option value="AGOSTO">AGOSTO</option>
+                  <option value="SEPTIEMBRE" selected="selected">SEPTIEMBRE</option>
+                  <option value="OCTUBRE">OCTUBRE</option>
+                  <option value="NOVIEMBRE">NOVIEMBRE</option>
+                  <option value="DICIEMBRE">DICIEMBRE</option>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" name="anioDeceso" 
+                [(ngModel)]="anioDeceso" id="anioDeceso"
+                (keyup)="actAnioDeceso()"
+                minlength="2018" maxlength="2019" size="4" 
+                value="2018">
+              </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="form-field-8">Consecuencias</label>
+          <input type="number" name="consecuencia" [(ngModel)]="consecuencia" (change)="actConsecuencia()" (keyup)="actConsecuencia()">
+        </div>
     </div>
 
 
@@ -538,14 +593,35 @@
             </div>
         </div>
       </div>
+
     </form>
     
   <div class="space-10"></div>
   </div>
+  <hr>
+  <div class="text-center">
+    <div class="row">
+      <div class="col-sm-3">
+        <button (click)="_datosFormato.fuente = 'calibri, sans-serif'" type="button" class="btn btn-default btn-round btn-white">
+          Calibri
+        </button>
+      </div>
+      <div class="col-sm-4">
+        <button (click)="_datosFormato.fuente = 'verdana, geneva'" type="button" class="btn btn-default btn-round btn-white">
+          Verdana
+        </button>
+      </div>
+      <div class="col-sm-3" style="margin-left: -13px">
+        <button (click)="_datosFormato.fuente = 'arial, helvetica, sans-serif'" type="button" class="btn btn-default btn-round btn-white">
+          Arial
+        </button>
+      </div>
+      <div class="col-sm-2" style="margin-left: -13px">
+          <input type="number" style="width: 50px" name="tamFuente" id="tamFuente" [(ngModel)]="tamFuente" value="12" (click)="actFuente()" (keyup)="actFuente()" max="30" maxlength="2">  
+      </div>
+    </div>      
+  </div>
   <div class="hr hr-dotted hr-20"></div>
-
-  <div class="hr hr-dotted hr-24"></div>
-
   <div class="text-center">
     <button type="button" class="btn btn-default btn-round btn-white">
       <i class="ace-icon fa fa-remove red2"></i>
@@ -553,22 +629,8 @@
     </button>
 
     <button type="button" (click)="onPrint()" class="btn btn-default btn-round btn-white">
-      <i class="ace-icon fa fa-refresh green"></i>
+      <i class="ace-icon fa fa-print green"></i>
       Imprimir
     </button>
   </div>
-  <hr>
-  <button (click)="_datosFormato.fuente = 'calibri, sans-serif'" type="button" class="btn btn-default btn-round btn-white">
-    Calibri
-  </button>
-  
-  <button (click)="_datosFormato.fuente = 'verdana, geneva'" type="button" class="btn btn-default btn-round btn-white">
-    Verdana
-  </button>
-  <button (click)="_datosFormato.fuente = 'arial, helvetica, sans-serif'" type="button" class="btn btn-default btn-round btn-white">
-    Arial
-  </button>
-  <input type="number" name="tamFuente" id="tamFuente" [(ngModel)]="tamFuente" value="12" (click)="actFuente()" (keyup)="actFuente()">
-
-  <div class="space-4"></div>
 </div>
