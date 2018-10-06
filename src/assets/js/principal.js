@@ -1,58 +1,6 @@
 jQuery(function($) {
 			
     //data for tree element
-    var category = {
-        'cabildo-municipal' : {text: 'Cabildo municipal', type: 'folder'}	,
-        'for-sale' : {text: 'For Sale', type: 'folder'}	,
-        'for-sale' : {text: 'For Sale', type: 'folder'}	,
-        'for-sale' : {text: 'For Sale', type: 'folder'}	,
-        'vehicles' : {text: 'Vehicles', type: 'item'}	,
-        'rentals' : {text: 'Rentals', type: 'item'}	,
-        'real-estate' : {text: 'Real Estate', type: 'item'}	,
-        'pets' : {text: 'Pets', type: 'item'}	,
-        'tickets' : {text: 'Tickets', type: 'item'}
-    }
-    category['cabildo-municipal']['additionalParameters'] = {
-        'children' : {
-            'appliances' : {text: 'Appliances', type: 'item'},
-            'arts-crafts' : {text: 'Arts & Crafts', type: 'item'},
-            'clothing' : {text: 'Clothing', type: 'item'},
-            'computers' : {text: 'Computers', type: 'item'},
-            'jewelry' : {text: 'Jewelry', type: 'item'},
-            'office-business' : {text: 'Office', type: 'item'},
-            'sports-fitness' : {text: 'Sports & Fitness', type: 'item'}
-        }
-    }
-    
-    var dataSource1 = function(options, callback){
-        var $data = null
-        if(!("text" in options) && !("type" in options)){
-            $data = category;//the root tree
-            callback({ data: $data });
-            return;
-        }
-        else if("type" in options && options.type == "folder") {
-            if("additionalParameters" in options && "children" in options.additionalParameters)
-                $data = options.additionalParameters.children || {};
-            else $data = {}//no data
-        }
-        
-        callback({ data: $data })
-    }
-    
-    $('#cat-tree').ace_tree({
-        dataSource: dataSource1,
-        multiSelect: true,
-        cacheItems: true,
-        'open-icon' : 'ace-icon tree-minus',
-        'close-icon' : 'ace-icon tree-plus',
-        'itemSelect' : true,
-        'folderSelect': false,
-        'selected-icon' : 'ace-icon fa fa-check',
-        'unselected-icon' : 'ace-icon fa fa-times',
-        loadingHTML : '<div class="tree-loading"><i class="ace-icon fa fa-refresh fa-spin blue"></i></div>'
-    });
-    
 
     $('.tree-container').ace_scroll({size: 250, mouseWheelLock: true});
     $('#cat-tree').on('closed.fu.tree disclosedFolder.fu.tree', function() {

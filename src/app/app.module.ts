@@ -28,6 +28,9 @@ import { AntecedentesNoPenalesComponent } from './pages/principal/formato/tipos/
 import { FooterSindicoComponent } from './pages/principal/formato/tipos/footer-sindico/footer-sindico.component';
 import { DomicilioComponent } from './pages/principal/formato/tipos/domicilio/domicilio.component';
 import { DefuncionComponent } from './pages/principal/formato/tipos/defuncion/defuncion.component';
+import { CitatorioComponent } from './pages/principal/formato/tipos/citatorio/citatorio.component';
+import { FooterAgenteAgenteSuplenteComponent } from './pages/principal/formato/tipos/footer-agente-agente-suplente/footer-agente-agente-suplente.component';
+import { FooterSindicoAuxYSinuxsuplenteComponent } from './pages/principal/formato/tipos/footer-sindico-aux-ysinuxsuplente/footer-sindico-aux-ysinuxsuplente.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +58,9 @@ import { DefuncionComponent } from './pages/principal/formato/tipos/defuncion/de
     FooterSindicoComponent,
     DomicilioComponent,
     DefuncionComponent,
+    CitatorioComponent,
+    FooterAgenteAgenteSuplenteComponent,
+    FooterSindicoAuxYSinuxsuplenteComponent,
   ],
   imports: [
     FormsModule,

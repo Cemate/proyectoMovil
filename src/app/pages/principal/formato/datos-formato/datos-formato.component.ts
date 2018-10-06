@@ -53,6 +53,9 @@ export class DatosFormatoComponent implements OnInit {
   anioDeceso = '2018';
   consecuencia = 1;
 
+  // Citatorio
+  asuntoCitatorio = 'RELACIONADO CON LA CULTURA DE NUESTRA COMUNIDAD';
+
   dia = 1;
   mes = 'OCTUBRE';
   anio = '2018';
@@ -198,6 +201,11 @@ actDiaDeceso() {
   }
   actAnioDeceso() {
     this._datosFormato.anioDeceso = this.anioDeceso;
+  }
+
+  // Citatorio
+  actAsuntoCitatorio() {
+    this._datosFormato.asuntoCitatorio = this.asuntoCitatorio;
   }
 
 

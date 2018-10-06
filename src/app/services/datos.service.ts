@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class DatosService {
   agente = 'LIC. GASPAR MELCHOR MONJARAZ JOSÉ';
   sindico = 'nombre del sindico';
+  sindicoAux = 'nombre del sindico aux';
   director = 'DIRECTOR DE LA ESCUELA';
   comite = 'COMITE DE PADRES DE FAMILIA';
   escuela = 'ESC. PRIMARIA';
@@ -33,6 +34,7 @@ export class DatosService {
   anioDeceso: string;
   horaDeceso: any;
   consecuencia: any;
+  asuntoCitatorio = 'LA CULTURA DE NUESTRA COMUNIDAD';
 
   constructor() {
   }

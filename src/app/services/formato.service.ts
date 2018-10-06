@@ -56,6 +56,11 @@ export class FormatoService {
       id: 8,
       nombre: 'C. de Defunción',
       imagen: 'nombramiento'
+    },
+    {
+      id: 9,
+      nombre: 'Citatorio',
+      imagen: 'nombramiento'
     }
   ];
 
