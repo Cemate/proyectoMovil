@@ -55,6 +55,9 @@ export class DatosFormatoComponent implements OnInit {
 
   // Citatorio
   asuntoCitatorio = 'RELACIONADO CON LA CULTURA DE NUESTRA COMUNIDAD';
+  //  Locatario
+  asuntoCitatorioLocatario = 'tratar asuntos que benefician a la buena organización de los mismos locatarios';
+  nombre2: string;
 
   dia = 1;
   mes = 'OCTUBRE';
@@ -206,6 +209,13 @@ actDiaDeceso() {
   // Citatorio
   actAsuntoCitatorio() {
     this._datosFormato.asuntoCitatorio = this.asuntoCitatorio;
+  }
+  // Citatorio Locatario
+  actAsuntoCitatorioLocatario() {
+    this._datosFormato.asuntoCitatorioLocatario = this.asuntoCitatorioLocatario;
+  }
+  actNombre2() {
+    this._datosFormato.nombre2 = this.nombre2;
   }
 
 

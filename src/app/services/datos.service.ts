@@ -36,11 +36,15 @@ export class DatosService {
   consecuencia: any;
   asuntoCitatorio = 'LA CULTURA DE NUESTRA COMUNIDAD';
 
+  asuntoCitatorioLocatario = 'tratar asuntos que benefician a la buena organización de los mismos locatarios';
+  nombre2;
+
   constructor() {
   }
 
   fuente = 'verdana, geneva';
   tamFuente = 12;
+  tamFuenteLocatarios = 12;
 
   nombre: string;
   sexo = 'hombre';

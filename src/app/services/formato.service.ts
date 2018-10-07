@@ -61,6 +61,11 @@ export class FormatoService {
       id: 9,
       nombre: 'Citatorio',
       imagen: 'nombramiento'
+    },
+    {
+      id: 10,
+      nombre: 'Citatorio Locatarios',
+      imagen: 'nombramiento'
     }
   ];
 

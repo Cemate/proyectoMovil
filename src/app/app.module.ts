@@ -31,6 +31,7 @@ import { DefuncionComponent } from './pages/principal/formato/tipos/defuncion/de
 import { CitatorioComponent } from './pages/principal/formato/tipos/citatorio/citatorio.component';
 import { FooterAgenteAgenteSuplenteComponent } from './pages/principal/formato/tipos/footer-agente-agente-suplente/footer-agente-agente-suplente.component';
 import { FooterSindicoAuxYSinuxsuplenteComponent } from './pages/principal/formato/tipos/footer-sindico-aux-ysinuxsuplente/footer-sindico-aux-ysinuxsuplente.component';
+import { CitatorioLocatariosComponent } from './pages/principal/formato/tipos/citatorio-locatarios/citatorio-locatarios.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { FooterSindicoAuxYSinuxsuplenteComponent } from './pages/principal/forma
     CitatorioComponent,
     FooterAgenteAgenteSuplenteComponent,
     FooterSindicoAuxYSinuxsuplenteComponent,
+    CitatorioLocatariosComponent,
   ],
   imports: [
     FormsModule,

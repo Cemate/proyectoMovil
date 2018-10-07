@@ -8,7 +8,7 @@ import { DatosService } from '../../../../../services/datos.service';
 })
 export class FooterSindicoAuxYSinuxsuplenteComponent implements OnInit {
 
-  constructor(_datos: DatosService) { }
+  constructor(public _datos: DatosService) { }
 
   ngOnInit() {
   }
