@@ -32,6 +32,10 @@ import { CitatorioComponent } from './pages/principal/formato/tipos/citatorio/ci
 import { FooterAgenteAgenteSuplenteComponent } from './pages/principal/formato/tipos/footer-agente-agente-suplente/footer-agente-agente-suplente.component';
 import { FooterSindicoAuxYSinuxsuplenteComponent } from './pages/principal/formato/tipos/footer-sindico-aux-ysinuxsuplente/footer-sindico-aux-ysinuxsuplente.component';
 import { CitatorioLocatariosComponent } from './pages/principal/formato/tipos/citatorio-locatarios/citatorio-locatarios.component';
+import { SolicitudPoliciaMunComponent } from './pages/principal/formato/tipos/solicitud-policia-mun/solicitud-policia-mun.component';
+import { FooterAgenteSindicoComponent } from './pages/principal/formato/tipos/footer-agente-sindico/footer-agente-sindico.component';
+import { HeaderFormatos2Component } from './pages/principal/formato/tipos/header-formatos2/header-formatos2.component';
+import { ConfiguracionesFormatosComponent } from './pages/shared/configuraciones-formatos/configuraciones-formatos.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +67,10 @@ import { CitatorioLocatariosComponent } from './pages/principal/formato/tipos/ci
     FooterAgenteAgenteSuplenteComponent,
     FooterSindicoAuxYSinuxsuplenteComponent,
     CitatorioLocatariosComponent,
+    SolicitudPoliciaMunComponent,
+    FooterAgenteSindicoComponent,
+    HeaderFormatos2Component,
+    ConfiguracionesFormatosComponent,
   ],
   imports: [
     FormsModule,

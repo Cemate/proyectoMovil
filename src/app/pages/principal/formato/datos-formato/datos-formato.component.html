@@ -1,7 +1,7 @@
 <div class="search-area well well-sm oculto-impresion">
-  <div class="search-filter-header bg-primary">
+  <div class="search-filter-header bg-primary" style="background-color: #5cb85c !important">
     <h5 class="smaller no-margin-bottom">
-      <i class="ace-icon fa fa-sliders light-green bigger-130"></i>&nbsp; Datos del formato
+      <i class="ace-icon fa fa-pencil light-dark bigger-130"></i>&nbsp; Datos del formato
     </h5>
   </div>
   <!-- Create a tag that we will use as the editable area. -->
@@ -223,7 +223,7 @@
                       type="checkbox" 
                       class="ace" 
                       [(ngModel)]="activarCom"
-                      data-md-icheck (change)="toggleVisibility($event)"/>
+                      (change)="activarComite($event)"/>
               <span class="lbl">Activar comite</span>
             </label>
           </div>
@@ -635,6 +635,28 @@
                         (keyup)="actAsuntoCitatorioLocatario()"/>
               </div>
           </div>
+    </div>
+    <div *ngIf="idFormato == 11">
+      <div class="form-group">
+        <div>
+            <label for="form-field-8">Lineas para motivo</label>
+            <input type="number" name="asuntoPolicia" [(ngModel)]="asuntoPolicia" (change)="actAsuntoPolicia()" (keyup)="actAsuntoPolicia()">
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="asuntoPolicia" class="sepElemForm"> Motivo de solicitud </label>
+          <div>
+            <input
+                    type="text" style="text-transform:uppercase;"
+                    id="asuntoPolicia"
+                    readonly="readonly"
+                    value="Actualize motivo --->"
+                    placeholder="Asunto"
+                    class="col-xs-10 col-sm-12" 
+                    name="asuntoPolicia">
+          </div>
+      </div>
     </div>
 
 

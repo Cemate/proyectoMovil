@@ -15,57 +15,74 @@ export class FormatoService {
     {
       id: 0,
       nombre: 'C. de Origen y vecidad',
-      imagen: 'origen-vecindad'
+      imagen: 'origen-vecindad',
+      mostrado: true
     },
     {
       id: 1,
       nombre: 'Liberación de servicio',
-      imagen: 'liberacion'
+      imagen: 'liberacion',
+      mostrado: true
     },
     {
       id: 2,
       nombre: 'C. de nombramiento',
-      imagen: 'nombramiento'
+      imagen: 'nombramiento',
+      mostrado: true
     },
     {
       id: 3,
       nombre: 'Citatorio Escuela',
-      imagen: 'nombramiento'
+      imagen: 'escuela',
+      mostrado: true
     },
     {
       id: 4,
       nombre: 'Constancia poseción',
-      imagen: 'nombramiento'
+      imagen: 'posecion',
+      mostrado: true
     },
     {
       id: 5,
       nombre: 'Ingresos económicos',
-      imagen: 'nombramiento'
+      imagen: 'economicos',
+      mostrado: true
     },
     {
       id: 6,
       nombre: 'C. Ants. No Penales',
-      imagen: 'nombramiento'
+      imagen: 'penales',
+      mostrado: true
     },
     {
       id: 7,
       nombre: 'C. Domicilio',
-      imagen: 'nombramiento'
+      imagen: 'domicilio',
+      mostrado: true
     },
     {
       id: 8,
       nombre: 'C. de Defunción',
-      imagen: 'nombramiento'
+      imagen: 'defuncion',
+      mostrado: true
     },
     {
       id: 9,
       nombre: 'Citatorio',
-      imagen: 'nombramiento'
+      imagen: 'reunion',
+      mostrado: true
     },
     {
       id: 10,
       nombre: 'Citatorio Locatarios',
-      imagen: 'nombramiento'
+      imagen: 'reunion',
+      mostrado: true
+    },
+    {
+      id: 11,
+      nombre: 'Solicitud policia',
+      imagen: 'policia',
+      mostrado: true
     }
   ];
 
@@ -82,22 +99,16 @@ export class FormatoService {
   }
 
   getFormato(id: any) {
-    // if (this.id) {
-    //   this.formato = this.formatos[this.id - 1];
-    //   return this.formatos[this.id - 1];
-    // } else {
-    //   return {
-    //     id: 0,
-    //     nombre: '',
-    //     imagen: ''
-    //   }
-    // }
     this.formato = this.formatos[id];
     return this.formatos[id];
   }
 
   cambiarBusqueda(termino: string) {
     this.busqueda = termino;
+  }
+
+  activarFormato(i) {
+    this.formatos[i].mostrado = !(this.formatos[i].mostrado);
   }
 
 }

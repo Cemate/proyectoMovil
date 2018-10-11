@@ -1,17 +1,19 @@
 <div class="row">
-  <div *ngFor="let formato of formatos | formato: this._formato.busqueda; let i = index" 
-      class="col-xs-6 col-sm-4 col-md-3" 
-      (click)="escogerFormato(formato.id)"
-      style=""
-      >
-    <div class="thumbnail search-thumbnail animated fadeIn ">
-      
-      <img class="media-object" style="width: 100px; height: 200;" src="../../../assets/images/formatos/{{formato.imagen}}.jpg" />
-      <div class="caption">
-        <h4 class="search-title">
-          <a (click)="escogerFormato(formato.id)" class="blue">{{formato.nombre}}</a>
-        </h4>
-        <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam ...</p> -->
+  <div *ngFor="let formato of formatos | formato: this._formato.busqueda; let i = index">
+    <div  
+        class="col-xs-6 col-sm-4 col-md-3" 
+        (click)="escogerFormato(formato.id)"
+        *ngIf="formato.mostrado"
+        >
+      <div class="thumbnail search-thumbnail animated fadeIn">
+        
+        <img class="media-object" style="width: 100px; height: 100px;" src="../../../assets/images/formatos/{{formato.imagen}}.jpg" />
+        <div class="caption">
+          <h4 class="search-title">
+            <a (click)="escogerFormato(formato.id)" class="blue">{{formato.nombre}}</a>
+          </h4>
+          <!-- <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam ...</p> -->
+        </div>
       </div>
     </div>
   </div>

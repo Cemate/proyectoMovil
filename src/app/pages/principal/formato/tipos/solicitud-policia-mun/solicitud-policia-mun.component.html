@@ -1,0 +1,33 @@
+<div>
+    <div class="row">
+        <app-header-formatos></app-header-formatos>
+    </div>
+  <div class="" [ngStyle]="{'font-family': _datos.fuente, 'font-size': _datos.tamFuente +'.0pt'}">
+    <p style="text-align: right;"><strong>ASUNTO:</strong> SE SOLICITA UNA PATRULLA DE POLICIA<br>MUNICIPAL Y ESTATAL.</p>
+        <p style="text-align: center;">BUENAVISTA LOXICHA POCHUTLA, OAXACA A {{_datos.dia}} DE {{_datos.mes}} DE {{_datos.anio}}</p>
+        <p>SINDICO MUNICIPAL CONSTITUCIONAL
+            <br>SAN AGUSTIN LOXICHA
+        </p>
+        <p>P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E</p>
+        
+        <p style="text-align: justify;">&nbsp; &nbsp; LOS QUE SUSCRIBEN C. AGENTE MUNICIPAL Y SINDICO MUNICIPAL CONSTL. CON CARACTER RECONOCIDO DE AUTORIDAD SE DIRIGE ANTE USTED, CON TODA ATENCION Y REPETO PARA SOLICITAR LOS SIGUIENTE.</p>
+        <textarea class="form-control areaConsecuencia"
+                id="form-field-8" rows="{{_datos.asuntoPolicia + 2}}"
+                placeholder="Agregar asunto"
+                style="text-transform:uppercase;"
+                [ngStyle]="{'font-family': _datos.fuente}">
+            EN VISTA DE QUE LOS DIAS (SEIS, SIETE Y OCHO) DEL MES DE FEBRERO DEL AÑO EN CURSO SE CELEBRA LA FESTIVIDAD PATRONAL DE LA VIRGEN DE LA GUADALUPE POR TAL MOTIVO SOLICITAMOS ANTE USTED UNAS  PATRULLAS  DE   DE POLICIA MUNICIPAL Y PREVENTIVOS PARA  RESGUARDAR ORDEN  Y PREVENIR CUALQUIER  ACTOS ILICITOS,Y DEJANDO UNA BUENA IMAGEN DE ORDEN EN LA COMUNIDAD    
+        </textarea>
+          
+        <p style="text-align: justify;">POR UN SERVICIO AL PUEBLO, ESPERAMOS CONTAR CON SU VALIOSO APOYO. RECIBE UN COORDIAL SALUDO Y QUEDAMOS DE USTED.</p>
+        
+        <app-footer-agente-sindico></app-footer-agente-sindico>
+        
+        <div [ngStyle]="{'font-size': '10.0pt' }">
+            
+        <p style="text-align: justify">C.C.P. EL C, {{_datos.nombre}} DIRECTOR DE LA POLICIA MUNICIPAL SAN AGUSTIN LOXICHA PARA SU CONOCIMIENTO. <br>
+        C.C.P. COMANDANTE DE LA POLICIA PREVENTIVA DEL AREA DE SAN AGUSTIN LOXICHA, POCH, OAX. PARA EL MISMO FIN.</p>
+        </div>
+    
+  </div>
+  </div>

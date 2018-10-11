@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DatosService {
   agente = 'LIC. GASPAR MELCHOR MONJARAZ JOSÉ';
+  agenteSup = 'nombre Agente Suplente';
   sindico = 'nombre del sindico';
   sindicoAux = 'nombre del sindico aux';
   director = 'DIRECTOR DE LA ESCUELA';
@@ -38,6 +39,12 @@ export class DatosService {
 
   asuntoCitatorioLocatario = 'tratar asuntos que benefician a la buena organización de los mismos locatarios';
   nombre2;
+
+  asuntoPolicia: any = 4;
+  agencia: string;
+
+  // activar o desactivar formato
+  origen: boolean;
 
   constructor() {
   }

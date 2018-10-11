@@ -58,6 +58,8 @@ export class DatosFormatoComponent implements OnInit {
   //  Locatario
   asuntoCitatorioLocatario = 'tratar asuntos que benefician a la buena organización de los mismos locatarios';
   nombre2: string;
+  // Solicitud Policía
+  asuntoPolicia = 4;
 
   dia = 1;
   mes = 'OCTUBRE';
@@ -118,9 +120,8 @@ export class DatosFormatoComponent implements OnInit {
     this._datosFormato.director = this.director;
   }
 
-  toggleVisibility(e) {
-    this.activarCom =  e.target.checked;
-    this._datosFormato.activarComite = this.activarCom;
+  activarComite(e) {
+    this._datosFormato.activarComite = e.target.checked;
   }
 
   actEscuela() {
@@ -217,7 +218,9 @@ actDiaDeceso() {
   actNombre2() {
     this._datosFormato.nombre2 = this.nombre2;
   }
-
+  actAsuntoPolicia() {
+    this._datosFormato.asuntoPolicia = this.asuntoPolicia;
+  }
 
 
   actDia() {

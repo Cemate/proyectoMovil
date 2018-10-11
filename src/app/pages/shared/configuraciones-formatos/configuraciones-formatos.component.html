@@ -1,0 +1,107 @@
+<div>
+    <div class="search-filter-header bg-primary" style="background-color: #D15B47!important">
+      <h5 class="smaller no-margin-bottom">
+        <i class="ace-icon fa fa-cogs light-dark bigger-130"></i>&nbsp; Configura tu sistema
+      </h5>
+    </div>
+  
+    <div class="space-10"></div>
+  
+    <form>
+      <div class="row">
+        <div class="col-xs-12 col-sm-11 col-md-10">
+          
+          <div class="form-group">
+              <label for="agencia" class="sepElemForm"> Agencia </label>
+                <div>
+                  <input
+                          type="text" style="text-transform:uppercase;"
+                          class="col-xs-10 col-sm-12" 
+                          name="agencia"
+                          placeholder="Nombre de agencia o municipio"
+                          value="{{_datos.agencia}}"
+                          [(ngModel)]="agencia"
+                          (keyup)="actAgencia()"
+                          >
+                </div>
+          </div>
+          <div class="form-group">
+              <label for="Agente" class="sepElemForm"> Agente </label>
+                <div>
+                  <input
+                          type="text" style="text-transform:uppercase;"
+                          class="col-xs-10 col-sm-12" 
+                          name="agente"
+                          placeholder="Nombre completo"
+                          value="{{_datos.agente}}"
+                          [(ngModel)]="agente"
+                          (keyup)="actAgente()"
+                          >
+                </div>
+          </div>
+          <div class="form-group">
+              <label for="AgenteSup" class="sepElemForm"> Agente Suplente </label>
+                <div>
+                  <input
+                          type="text" style="text-transform:uppercase;"
+                          class="col-xs-10 col-sm-12" 
+                          name="agenteSup"
+                          placeholder="Nombre completo"
+                          value="{{_datos.agenteSup}}"
+                          [(ngModel)]="agenteSup"
+                          (keyup)="actAgenteSup()"
+                          >
+                </div>
+          </div>
+          <div class="form-group">
+              <label for="sindico" class="sepElemForm"> Sindico </label>
+                <div>
+                  <input
+                          type="text" style="text-transform:uppercase;"
+                          class="col-xs-10 col-sm-12" 
+                          name="sindico"
+                          placeholder="Nombre completo"
+                          value="{{_datos.sindico}}"
+                          [(ngModel)]="sindico"
+                          (keyup)="actSindico()"
+                          >
+                </div>
+          </div>
+          <div class="form-group">
+              <label for="sindicoAux" class="sepElemForm"> Sindico Auxiliar </label>
+                <div>
+                  <input
+                          type="text" style="text-transform:uppercase;"
+                          class="col-xs-10 col-sm-12" 
+                          name="sindicoAux"
+                          placeholder="Nombre completo"
+                          value="{{_datos.sindicoAux}}"
+                          [(ngModel)]="sindicoAux"
+                          (keyup)="actSindicoAux()"
+                          >
+                </div>
+          </div>
+          <hr>
+          <div class="control-group">
+              <label class="control-label bolder blue">Seleccionar formatos</label>
+
+              <div class="checkbox" *ngFor="let formato of formatos; let i = index">
+                <label>
+                  <input name="formato.id" 
+                  type="checkbox" 
+                  class="ace"
+                  [checked]="formato.mostrado"
+                  (change)="activarFormato(i);"/>
+                  <span class="lbl"> {{formato.nombre}}</span>
+                </label>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </form>
+  
+    <div class="hr hr-dotted"></div>
+    <!-- <div class="hr hr-dotted"></div> -->
+    <div class="space-4"></div>
+  </div>
