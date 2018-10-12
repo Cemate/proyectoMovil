@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './pages/shared/footer/footer.component';
@@ -37,6 +38,7 @@ import { FooterAgenteSindicoComponent } from './pages/principal/formato/tipos/fo
 import { HeaderFormatos2Component } from './pages/principal/formato/tipos/header-formatos2/header-formatos2.component';
 import { ConfiguracionesFormatosComponent } from './pages/shared/configuraciones-formatos/configuraciones-formatos.component';
 import { HeaderLocatariosComponent } from './pages/principal/formato/tipos/header-locatarios/header-locatarios.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -73,12 +75,14 @@ import { HeaderLocatariosComponent } from './pages/principal/formato/tipos/heade
     HeaderFormatos2Component,
     ConfiguracionesFormatosComponent,
     HeaderLocatariosComponent,
+    LoginComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

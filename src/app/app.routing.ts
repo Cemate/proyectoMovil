@@ -1,3 +1,4 @@
+import { LoginComponent } from './pages/login/login.component';
 import { AntecedentesNoPenalesComponent } from './pages/principal/formato/tipos/antecedentes-no-penales/antecedentes-no-penales.component';
 import { CitatorioEscuelasComponent } from './pages/principal/formato/tipos/citatorio-escuelas/citatorio-escuelas.component';
 import { LiberacionServicioComponent } from './pages/principal/formato/tipos/liberacion-servicio/liberacion-servicio.component';
@@ -11,7 +12,7 @@ import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/con
 import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ingresos-economicos/ingresos-economicos.component';
 
 const app_routes: Routes = [
-    // { path: 'formatos', component: PrincipalComponent},
+    { path: '', component: LoginComponent},
     // { path: 'about', component: AboutComponent},
     { path: 'home', children: [
         { path: '', component: PrincipalComponent},
@@ -27,7 +28,7 @@ const app_routes: Routes = [
     ]},
     // { path: 'formato/:id', component: FormatoComponent},
     // { path: 'search/:termino', component: SearchComponent},
-    { path: '**', pathMatch: 'full', redirectTo: 'home' }
+    { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
 @NgModule({
