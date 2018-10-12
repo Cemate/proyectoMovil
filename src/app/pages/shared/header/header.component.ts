@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormatoService } from '../../../services/formato.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,8 @@ import { FormatoService } from '../../../services/formato.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private _formato: FormatoService) { }
+  constructor(private _formato: FormatoService,
+              public auth: AuthService) { }
 
   ngOnInit() {
   }

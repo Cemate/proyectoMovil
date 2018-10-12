@@ -10,11 +10,12 @@ import { FormatoComponent } from './pages/principal/formato/formato.component';
 import { NombramientoComponent } from './pages/principal/formato/tipos/nombramiento/nombramiento.component';
 import { ConstanciaPosesionComponent } from './pages/principal/formato/tipos/constancia-posesion/constancia-posesion.component';
 import { IngresosEconomicosComponent } from './pages/principal/formato/tipos/ingresos-economicos/ingresos-economicos.component';
+import { AuthGuard } from './auth.guard';
 
 const app_routes: Routes = [
-    { path: '', component: LoginComponent},
+    { path: 'login', component: LoginComponent},
     // { path: 'about', component: AboutComponent},
-    { path: 'home', children: [
+    { path: 'home', canActivate: [AuthGuard], children: [
         { path: '', component: PrincipalComponent},
         { path: 'formato/:id', component: FormatoComponent, children: [
             { path: '1', component: OrigenVecindadComponent},
@@ -28,7 +29,7 @@ const app_routes: Routes = [
     ]},
     // { path: 'formato/:id', component: FormatoComponent},
     // { path: 'search/:termino', component: SearchComponent},
-    { path: '**', pathMatch: 'full', redirectTo: '' }
+    { path: '**', pathMatch: 'full', redirectTo: 'login' }
 ];
 
 @NgModule({

@@ -11,6 +11,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
 
   form;
+  mensaje = '';
   constructor(private fb: FormBuilder,
               private myRouter: Router,
               private auth: AuthService) {
@@ -25,8 +26,8 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.form.valid) {
-      this.auth.sendToken(this.form.email);
-      this.myRouter.navigate(['/home']);
+      this.mensaje = this.auth.sendToken(this.form.value.username);
+      // this.myRouter.navigate(['/home']);
       console.log('Yeesss...');
     }
   }

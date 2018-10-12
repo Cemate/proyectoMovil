@@ -9,7 +9,13 @@ export class AuthService {
   constructor(private myRoute: Router) { }
 
   sendToken(token: string) {
-    localStorage.setItem('LoggedInUser', token);
+    if (token === 'agente'){
+      localStorage.setItem('LoggedInUser', token);
+      this.myRoute.navigate(['/home']);
+      return 'logeado';
+    } else {
+      return 'Error de usuario o contraseña';
+    }
   }
   getToken() {
     return localStorage.getItem('LoggedInUser');
@@ -19,6 +25,6 @@ export class AuthService {
   }
   logout() {
     localStorage.removeItem('LoggedInUser');
-    this.myRoute.navigate(['login']);
+    this.myRoute.navigate(['/login']);
   }
 }
