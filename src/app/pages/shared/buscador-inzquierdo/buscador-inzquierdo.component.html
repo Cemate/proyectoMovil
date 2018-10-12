@@ -18,7 +18,6 @@
                   value="{{_formato.busqueda}}"
                   #buscarTexto
                   [(ngModel)]="termino"
-                  placeholder="Formato"
                   (keyup)="buscar(buscarTexto.value)"
            />
           <div class="input-group-btn">
@@ -32,6 +31,16 @@
   </form>
 
   <div class="hr hr-dotted"></div>
+  <div>
+    <p style="font-size: 13px;">
+      Ayuda: <br>
+      1.- Selecciona el formato que desea generar <br>
+      2.- Rellene todos los datos solicitados <br>
+      3.- Verifique los datos asentados en el documento<br>
+      4.- Presione el botón imprimir y <br>
+      5.- Verifique márgenes
+    </p>
+  </div>
   <!-- <div>
       <label for="form-field-select-1">Formato</label>
 

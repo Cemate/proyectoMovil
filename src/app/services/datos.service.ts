@@ -41,7 +41,8 @@ export class DatosService {
   nombre2;
 
   asuntoPolicia: any = 4;
-  agencia: string;
+  agencia = 'BUENAVISTA LOXICHA POCHUTLA';
+  agenciaLogo = 'BUENAVISTA LOXICHA';
 
   // activar o desactivar formato
   origen: boolean;

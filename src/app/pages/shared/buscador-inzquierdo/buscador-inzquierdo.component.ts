@@ -10,7 +10,9 @@ export class BuscadorInzquierdoComponent implements OnInit {
 
   termino: string;
 
-  constructor(public _formato: FormatoService) { }
+  constructor(public _formato: FormatoService) {
+    this.termino = _formato.busqueda;
+   }
 
   ngOnInit() {
   }

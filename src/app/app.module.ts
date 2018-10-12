@@ -36,6 +36,7 @@ import { SolicitudPoliciaMunComponent } from './pages/principal/formato/tipos/so
 import { FooterAgenteSindicoComponent } from './pages/principal/formato/tipos/footer-agente-sindico/footer-agente-sindico.component';
 import { HeaderFormatos2Component } from './pages/principal/formato/tipos/header-formatos2/header-formatos2.component';
 import { ConfiguracionesFormatosComponent } from './pages/shared/configuraciones-formatos/configuraciones-formatos.component';
+import { HeaderLocatariosComponent } from './pages/principal/formato/tipos/header-locatarios/header-locatarios.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { ConfiguracionesFormatosComponent } from './pages/shared/configuraciones
     FooterAgenteSindicoComponent,
     HeaderFormatos2Component,
     ConfiguracionesFormatosComponent,
+    HeaderLocatariosComponent,
   ],
   imports: [
     FormsModule,
