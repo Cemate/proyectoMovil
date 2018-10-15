@@ -39,6 +39,7 @@ import { HeaderFormatos2Component } from './pages/principal/formato/tipos/header
 import { ConfiguracionesFormatosComponent } from './pages/shared/configuraciones-formatos/configuraciones-formatos.component';
 import { HeaderLocatariosComponent } from './pages/principal/formato/tipos/header-locatarios/header-locatarios.component';
 import { LoginComponent } from './pages/login/login.component';
+import { OficinaPipe } from './pipes/oficina.pipe';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { LoginComponent } from './pages/login/login.component';
     ConfiguracionesFormatosComponent,
     HeaderLocatariosComponent,
     LoginComponent,
+    OficinaPipe,
   ],
   imports: [
     FormsModule,

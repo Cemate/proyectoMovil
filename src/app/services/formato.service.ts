@@ -10,79 +10,92 @@ export class FormatoService {
   busqueda = '';
   formatosFiltrados: any = [];
   formato: any;
+  oficina: string;
 
   private formatos: Formato[] = [
     {
       id: 0,
       nombre: 'C. de Origen y vecidad',
       imagen: 'origen-vecindad',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     },
     {
       id: 1,
       nombre: 'Liberación de servicio',
       imagen: 'liberacion',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     },
     {
       id: 2,
       nombre: 'C. de nombramiento',
       imagen: 'nombramiento',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     },
     {
       id: 3,
       nombre: 'Citatorio Escuela',
       imagen: 'escuela',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     },
     {
       id: 4,
       nombre: 'Constancia poseción',
       imagen: 'posecion',
-      mostrado: true
+      mostrado: true,
+      oficina: 'sindico'
     },
     {
       id: 5,
       nombre: 'Ingresos económicos',
       imagen: 'economicos',
-      mostrado: true
+      mostrado: true,
+      oficina: 'sindico'
     },
     {
       id: 6,
       nombre: 'C. Ants. No Penales',
       imagen: 'penales',
-      mostrado: true
+      mostrado: true,
+      oficina: 'sindico'
     },
     {
       id: 7,
       nombre: 'C. Domicilio',
       imagen: 'domicilio',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     },
     {
       id: 8,
       nombre: 'C. de Defunción',
       imagen: 'defuncion',
-      mostrado: true
+      mostrado: true,
+      oficina: 'sindico'
     },
     {
       id: 9,
       nombre: 'Citatorio',
       imagen: 'reunion',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     },
     {
       id: 10,
       nombre: 'Citatorio Locatarios',
       imagen: 'reunion',
-      mostrado: true
+      mostrado: true,
+      oficina: 'sindico'
     },
     {
       id: 11,
       nombre: 'Solicitud policia',
       imagen: 'policia',
-      mostrado: true
+      mostrado: true,
+      oficina: 'agente'
     }
   ];
 
@@ -90,7 +103,9 @@ export class FormatoService {
     this.formato = {
       id: '',
       nombre: '',
-      imagen: ''
+      imagen: '',
+      mostrado: true,
+      oficina: ''
     };
    }
 

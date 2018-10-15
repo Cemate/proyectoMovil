@@ -1,6 +1,6 @@
 <app-navegacion></app-navegacion>
 <div class="row">
-  <div *ngFor="let formato of formatos | formato: this._formato.busqueda; let i = index">
+  <div *ngFor="let formato of formatos | formato: this._formato.busqueda | oficina: this._formato.oficina; let i = index">
     <div  
         class="col-xs-6 col-sm-4 col-md-3" 
         (click)="escogerFormato(formato.id)"

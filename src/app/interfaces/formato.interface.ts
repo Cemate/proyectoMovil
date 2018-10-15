@@ -3,4 +3,5 @@ export interface Formato {
     nombre?: string;
     imagen?: string;
     mostrado: boolean;
+    oficina: string;
 }

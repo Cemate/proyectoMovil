@@ -10,10 +10,10 @@
       <p style="text-align: center;"><strong><span style="color: #262626;">HAGO CONSTAR</span></strong><span style="color: #262626;">&nbsp;</span></p>
       <p style="text-align: center;">&nbsp;</p>
 
-      <p *ngIf="_datos.sexo == 'hombre'; else elseBlock" style="text-align: justify;"><span style="color: #262626;">QUE EL C. <strong>{{_datos.nombre | uppercase}}, </strong>DE {{_datos.edad }} AÑOS DE EDAD, QUIEN ES VECINO DE {{_datos.vecinoDe | uppercase}} PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA, SIENDO&nbsp; SUS PADRES EL SEÑOR: <strong>{{_datos.padre | uppercase}}</strong> <strong>&nbsp;</strong>Y LA SEÑORA: <strong>{{_datos.madre | uppercase}}, </strong>DE NACIONALIDAD MEXICANA, CON&nbsp; DOMICILIO BIEN CONOCIDO EN ESTA MISMA POBLACION.&nbsp; </span></p>
+      <p *ngIf="_datos.sexo == 'hombre'; else elseBlock" style="text-align: justify;"><span style="color: #262626;">QUE EL C. <strong>{{_datos.nombre | uppercase}}, </strong>DE {{_datos.edad }} AÑOS DE EDAD, QUIEN ES VECINO DE {{_datos.vecinoDe | uppercase}} PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA, SIENDO SUS PADRES EL SEÑOR: <strong>{{_datos.padre | uppercase}}</strong> <strong>&nbsp;</strong>Y LA SEÑORA: <strong>{{_datos.madre | uppercase}}, </strong>DE NACIONALIDAD MEXICANA, CON DOMICILIO BIEN CONOCIDO EN ESTA MISMA POBLACION.</span></p>
 
       <ng-template #elseBlock>
-          <p style="text-align: justify;"><span style="color: #262626;">QUE LA C. <strong>{{_datos.nombre | uppercase}}, </strong>DE {{_datos.edad | uppercase}} AÑOS DE EDAD, QUIEN ES VECINA DE {{_datos.vecinoDe | uppercase}} PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA, SIENDO&nbsp; SUS PADRES EL SEÑOR: <strong>{{_datos.padre | uppercase}}</strong> <strong>&nbsp;</strong>Y LA SEÑORA: <strong>{{_datos.madre | uppercase}}, </strong>DE NACIONALIDAD MEXICANA, CON&nbsp; DOMICILIO BIEN CONOCIDO EN ESTA MISMA POBLACION.&nbsp; </span></p>
+          <p style="text-align: justify;"><span style="color: #262626;">QUE LA C. <strong>{{_datos.nombre | uppercase}}, </strong>DE {{_datos.edad | uppercase}} AÑOS DE EDAD, QUIEN ES VECINA DE {{_datos.vecinoDe | uppercase}} PERTENECIENTE AL MUNICIPIO DE SAN AGUSTIN LOXICHA, SIENDO SUS PADRES EL SEÑOR: <strong>{{_datos.padre | uppercase}}</strong> <strong>&nbsp;</strong>Y LA SEÑORA: <strong>{{_datos.madre | uppercase}}, </strong>DE NACIONALIDAD MEXICANA, CON DOMICILIO BIEN CONOCIDO EN ESTA MISMA POBLACION.</span></p>
       </ng-template>
       
       <p style="text-align: justify;"><span style="color: #262626;">&nbsp;</span></p>
