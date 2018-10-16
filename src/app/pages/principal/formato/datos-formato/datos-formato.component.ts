@@ -74,7 +74,7 @@ export class DatosFormatoComponent implements OnInit {
 
       this.actRoute.params.subscribe( params => {
         this.idFormato = params['id'];
-        console.log('hola ' + this.idFormato);
+        // console.log('hola ' + this.idFormato);
        });
 
       this.norte = '1 METRO Y COLINDA CON EL PREDIO DEL SEÑOR JUAN JOSE ENRIQUEZ';
@@ -242,6 +242,6 @@ actDiaDeceso() {
 
   actFuente() {
     this._datosFormato.tamFuente = this.tamFuente;
-    console.log(this.tamFuente);
+    // console.log(this.tamFuente);
   }
 }

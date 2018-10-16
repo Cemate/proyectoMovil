@@ -9,7 +9,7 @@ export class FormatoService {
   id: number;
   busqueda = '';
   formatosFiltrados: any = [];
-  formato: any;
+  formato: {};
   oficina: string;
 
   private formatos: Formato[] = [
@@ -124,6 +124,16 @@ export class FormatoService {
 
   activarFormato(i) {
     this.formatos[i].mostrado = !(this.formatos[i].mostrado);
+  }
+
+  vaciarFormato() {
+    this.formato = {
+      id: '',
+      nombre: '',
+      imagen: '',
+      mostrado: true,
+      oficina: ''
+    };
   }
 
 }

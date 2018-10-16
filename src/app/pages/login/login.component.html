@@ -7,7 +7,7 @@
                 <div class="center">
                   <h1>
                     <i class="ace-icon fa fa-books green"></i>
-                    <span class="red">Docu</span>
+                    <span class="red">DOCUGOB </span>
                     <span class="grey" id="id-text2">System</span>
                   </h1>
                   <h4 class="blue" id="id-company-text">&copy; Buenavista Loxicha</h4>
@@ -30,7 +30,7 @@
                           <fieldset>
                             <label class="block clearfix">
                               <span class="block input-icon input-icon-right">
-                                <input type="text" class="form-control" placeholder="Usuario" formControlName="username" />
+                                <input type="text" class="form-control" [(ngModel)]="username" placeholder="Usuario" formControlName="username" />
                                 <i class="ace-icon fa fa-user"></i>
                               </span>
                             </label>
@@ -69,11 +69,11 @@
                         <div class="space-6"></div>
   
                         <div class="social-login center">
-                          <a class="btn btn-primary">
+                          <a class="btn btn-primary" (click)="asignarAgente()">
                             <i class="ace-icon fa fa-user"></i>
                           </a>
   
-                          <a class="btn btn-info">
+                          <a class="btn btn-info" (click)="asignarSindico()">
                             <i class="ace-icon fa fa-users"></i>
                           </a>
   
@@ -97,7 +97,7 @@
                             <i class="ace-icon fa fa-arrow-right"></i>
                           </a>
                         </div> -->
-                        <p>User:agente Password:agente </p>
+                        <p style="color: white; ">www.formatosbuenavista.ml <br> User:agente Password:agente </p>
                       </div>
                     </div><!-- /.widget-body -->
                   </div><!-- /.login-box -->

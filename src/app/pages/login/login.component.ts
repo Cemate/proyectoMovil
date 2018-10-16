@@ -12,6 +12,8 @@ export class LoginComponent implements OnInit {
 
   form;
   mensaje = '';
+  username;
+  password;
   constructor(private fb: FormBuilder,
               private myRouter: Router,
               private auth: AuthService) {
@@ -28,8 +30,16 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       this.mensaje = this.auth.sendToken(this.form.value.username);
       // this.myRouter.navigate(['/home']);
-      console.log('Yeesss...');
+      // console.log('Yeesss...');
     }
+  }
+
+  asignarAgente() {
+    this.username = 'agente';
+  }
+
+  asignarSindico() {
+    this.username = 'sindico';
   }
 
 }

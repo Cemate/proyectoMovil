@@ -14,6 +14,7 @@ export class ConfiguracionesFormatosComponent implements OnInit {
   sindico: string;
   sindicoAux: string;
   agencia: string;
+  agenciaLogo: string;
 
   origen = true;
   liberacion = true;
@@ -38,6 +39,7 @@ export class ConfiguracionesFormatosComponent implements OnInit {
   this.sindico = this._datos.sindico;
   this.sindicoAux = this._datos.sindicoAux;
   this.agencia = this._datos.agencia;
+  this.agenciaLogo = this._datos.agenciaLogo;
 
   }
 
@@ -58,6 +60,9 @@ export class ConfiguracionesFormatosComponent implements OnInit {
   }
   actAgencia() {
     this._datos.agencia = this.agencia;
+  }
+  actAgenciaLogo() {
+    this._datos.agenciaLogo = this.agenciaLogo;
   }
 
   activarFormato(i) {
