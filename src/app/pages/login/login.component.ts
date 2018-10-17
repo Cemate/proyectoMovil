@@ -35,11 +35,24 @@ export class LoginComponent implements OnInit {
   }
 
   asignarAgente() {
-    this.username = 'agente';
+    this.form = this.fb.group({
+      username: ['agente', [Validators.required]],
+      password: ['agente', Validators.required]
+    });
   }
 
   asignarSindico() {
-    this.username = 'sindico';
+    this.form = this.fb.group({
+      username: ['sindico', [Validators.required]],
+      password: ['sindico', Validators.required]
+    });
+  }
+
+  asignarAdmin() {
+    this.form = this.fb.group({
+      username: ['admin', [Validators.required]],
+      password: ['admin', Validators.required]
+    });
   }
 
 }

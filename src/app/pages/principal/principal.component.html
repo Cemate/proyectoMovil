@@ -42,10 +42,14 @@
                   
                   <div class="hr hr-dotted hr-24"></div>
 
-                  <a (click)="config = !config" style="float: centered; font-size: 12px">
+                  <a (click)="config = !config" *ngIf="auth.getToken() == 'admin'" style="float: centered; font-size: 12px">
                     <i class="ace-icon fa fa-cog bigger-110 blue"></i>
                     Actualizar formatos
                   </a>
+                  <a (click)="config = !config" *ngIf="auth.getToken() !== 'admin'" style="float: centered; font-size: 12px">
+                      <i class="ace-icon fa fa-cog bigger-110 blue"></i>
+                      Ver datos y formatos
+                    </a>
                   <br>
                   <div class="hr hr-dotted hr-24"></div>
                   

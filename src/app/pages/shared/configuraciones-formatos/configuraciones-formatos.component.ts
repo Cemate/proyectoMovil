@@ -1,6 +1,7 @@
 import { FormatoService } from './../../../services/formato.service';
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from '../../../services/datos.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-configuraciones-formatos',
@@ -32,7 +33,8 @@ export class ConfiguracionesFormatosComponent implements OnInit {
   formatos: any;
 
   constructor(public _datos: DatosService,
-              public _formato: FormatoService) {
+              public _formato: FormatoService,
+              public auth: AuthService) {
     this.formatos = this._formato.getFormatos();
   this.agente = this._datos.agente;
   this.agenteSup = this._datos.agenteSup;

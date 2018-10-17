@@ -9,7 +9,13 @@ export class FormatoService {
   id: number;
   busqueda = '';
   formatosFiltrados: any = [];
-  formato: {};
+  formato: Formato = {
+    id: 0,
+    nombre: '',
+    imagen: '',
+    mostrado: true,
+    oficina: ''
+  };
   oficina: string;
 
   private formatos: Formato[] = [
@@ -43,7 +49,7 @@ export class FormatoService {
     },
     {
       id: 4,
-      nombre: 'Constancia poseción',
+      nombre: 'Constancia posesión',
       imagen: 'posecion',
       mostrado: true,
       oficina: 'sindico'
@@ -101,7 +107,7 @@ export class FormatoService {
 
   constructor() {
     this.formato = {
-      id: '',
+      id: 0,
       nombre: '',
       imagen: '',
       mostrado: true,
@@ -128,7 +134,7 @@ export class FormatoService {
 
   vaciarFormato() {
     this.formato = {
-      id: '',
+      id: 0,
       nombre: '',
       imagen: '',
       mostrado: true,
